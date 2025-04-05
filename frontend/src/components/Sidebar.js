@@ -15,7 +15,7 @@ import {
     const schedules = [
         'Final one',
         'If i need 14 hours',
-        'tough one lowkey',
+        'tough one lowkey, but if i put in enough effort i should be okay',
     ]
     const toggleSidebar = () => {
         setOpen(!open)
