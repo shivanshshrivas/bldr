@@ -1,3 +1,4 @@
+// models/mongoScheduleModel.js
 const mongoose = require("mongoose")
 
 const classSchema = new mongoose.Schema({
@@ -20,6 +21,7 @@ const scheduleSchema = new mongoose.Schema({
   userID: String,          // user who owns this schedule
   semester: String,
   scheduleName: String,
+  createdAt: { type: Date, default: Date.now },
   lastEdited: { type: Date, default: Date.now },
   classes: [classSchema]
 })

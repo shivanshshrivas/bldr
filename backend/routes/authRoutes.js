@@ -1,11 +1,13 @@
+// routes/authRoutes.js
 const express = require("express")
 const router = express.Router()
-const { loginUser, signupUser } = require("../controllers/authController")
+const upload = require("../middleware/upload")
+const { signupUser, loginUser } = require("../controllers/authController")
 
-// POST /api/auth/login
+// Signup with transcript upload
+router.post("/signup", upload.single("transcript"), signupUser)
+
+// Login
 router.post("/login", loginUser)
-
-// POST /api/auth/signup
-router.post("/signup", signupUser)
 
 module.exports = router
