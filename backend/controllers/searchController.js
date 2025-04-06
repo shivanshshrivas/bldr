@@ -25,7 +25,7 @@ const searchClasses = async (req, res) => {
     }
 
     if (result.rows.length === 0) return res.status(404).json({ message: "No classes found" })
-
+        
     res.json({ classes: result.rows })
   } catch (err) {
     console.error("❌ searchClasses error:", err.message)

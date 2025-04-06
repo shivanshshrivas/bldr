@@ -22,6 +22,10 @@ app.use("/api/transcript", require("./routes/transcriptRoutes"))
 app.use("/api/suggest", require("./routes/suggestRoutes"))
 app.use("/api/search", require("./routes/searchRoutes"))
 app.use("/api/schedule", require("./routes/scheduleRoutes"))
+app.use("/api/google", require("./routes/googleRoutes"))
+app.use("/api/chatbot", require("./routes/chatbotRoutes"))
+
+
 
 
 
