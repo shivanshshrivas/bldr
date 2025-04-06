@@ -14,16 +14,16 @@ export default function Info() {
             <div className="flex flex-col justify-start items-center h-screen py-10 bg-[#1a1a1a] text-[#fafafa]">
                 <div className="header w-full flex flex-col justify-start items-center mb-10">
                     <h1 className="text-5xl font-dmsans font-bold mb-3">Welcome to bldr</h1>
-                    <h2 className="text-3xl font-dmsans text-[#A8A8A8] dark:text-[#5a5a5a]">Flagship Schedule Builder</h2>                
+                    <h2 className="text-3xl font-dmsans text-[#A8A8A8]">Flagship Schedule Builder</h2>                
                 </div>
                 <div className="login-form flex flex-col justify-center items-center w-fit border border-[#404040] p-10 rounded-lg">
                     <div className="form-header w-full flex flex-col justify-start items-start mb-2">
                         <h1 className="text-3xl font-bold font-dmsans mb-2">Few more details...</h1>
-                        <h2 className="text-[#A8A8A8] text-xs font-inter mb-4 dark:text-[#5a5a5a]">Help us personalize your experience</h2>
+                        <h2 className="text-[#A8A8A8] text-xs font-inter mb-4 ">Help us personalize your experience</h2>
                     </div>
                     <form className="flex flex-col gap-4 w-96">
                         <Label htmlFor="transcript" className="text-sm font-inter -mb-1">Unofficial Transcript</Label>
-                        <Input type="file" id="transcript" className="font-figtree [&::file-selector-button]:text-[#404040] border-[#404040] bg-[#1a1a1a] text-[#fafafa] placeholder:text-[#a8a8a8]" required />
+                        <Input type="file" id="transcript" className="font-figtree cursor-pointer [&::file-selector-button]:text-[#a8a8a8] border-[#404040] bg-[#1a1a1a] text-[#fafafa]" required />
 
                         <Label htmlFor="major" className="text-sm font-inter -mb-1">Major</Label>
                         <Select >

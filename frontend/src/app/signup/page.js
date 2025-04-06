@@ -5,9 +5,20 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label"
 import { useState } from "react";
 import Link from "next/link";
-
+import { useRouter } from "next/navigation";
 
 export default function Signup() {
+
+    const router = useRouter();
+
+
+    const handleClick = (event) => {
+        event.preventDefault();
+
+        router.push('/info');
+    }
+
+
     return (
         <div className="signup">
             <div className="flex flex-col justify-start items-center h-screen py-10">
@@ -29,7 +40,9 @@ export default function Signup() {
                         
                         <Label htmlFor="confirm-password" className="text-sm font-inter -mb-1">Confirm Password</Label>
                         <Input type="password" id='confirm-password' className={`font-inter border-[#404040] border-2`} required />
-                        <Button type="submit" className={`bg-[#fafafa] text-[#1a1a1a] hover:bg-[#404040] hover:text-[#fafafa] cursor-pointer font-dmsans text-md my-3`}>Sign Up</Button>
+                        <Button type="submit" className={`bg-[#fafafa] text-[#1a1a1a] hover:bg-[#404040] hover:text-[#fafafa] cursor-pointer font-dmsans text-md my-3`}
+                        onClick={(e) => {handleClick(e)}}>
+                            Sign Up</Button>
                     </form>
                     <div className="text-[#a8a8a8] text-xs mt-3 font-inter">Already have an account with us? <Link href={'/login'} className="font-medium text-white font-inter">Log in</Link></div>
                 </div>
