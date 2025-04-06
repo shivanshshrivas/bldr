@@ -1,31 +1,50 @@
 // controllers/chatbotRemoveController.js
-const Schedule = require("../models/mongoScheduleModel")
+const Schedule = require("../models/mongoScheduleModel");
 
 const removeClassFromSchedule = async (req, res) => {
-  const { userID, course } = req.body
-  if (!userID || !course) return res.status(400).json({ error: "Missing userID or course name" })
+  const { userID, classQuery } = req.body;
+
+  if (!userID || !classQuery) {
+    return res.status(400).json({ error: "Missing userID or classQuery" });
+  }
 
   try {
-    const sched = await Schedule.findOne({ userID }, {}, { sort: { lastEdited: -1 } })
-    if (!sched) return res.status(404).json({ error: "No existing schedule found" })
-
-    const originalLength = sched.classes.length
-    sched.classes = sched.classes.filter(cls => cls.course !== course)
-
-    if (sched.classes.length === originalLength) {
-      return res.status(404).json({ error: `Course '${course}' not found in schedule.` })
+    // Break classQuery into dept and code (e.g., "EECS 510")
+    const [dept, code] = classQuery.trim().split(" ");
+    if (!dept || !code) {
+      return res.status(400).json({ error: "Invalid classQuery format" });
     }
 
-    sched.lastEdited = new Date()
-    await sched.save()
+    // Load latest schedule
+    const schedule = await Schedule.findOne({ userID }, {}, { sort: { lastEdited: -1 } });
 
-    res.json({ message: `✅ Removed '${course}' from schedule`, updatedSchedule: sched.classes })
+    if (!schedule) {
+      return res.status(404).json({ error: "No schedule found for user" });
+    }
+
+    // Filter out matching classes
+    const originalLength = schedule.classes.length;
+    schedule.classes = schedule.classes.filter(
+      cls => !(cls.dept.toUpperCase() === dept.toUpperCase() && String(cls.code) === String(code))
+    );
+
+    if (schedule.classes.length === originalLength) {
+      return res.status(404).json({ error: `Class ${dept} ${code} not found in schedule` });
+    }
+
+    schedule.lastEdited = new Date();
+    await schedule.save();
+
+    return res.json({
+      message: `✅ Removed ${dept} ${code} from your schedule.`,
+      updatedSchedule: schedule.classes,
+    });
   } catch (err) {
-    console.error("❌ Error removing class:", err.message)
-    res.status(500).json({ error: "Failed to remove class from schedule" })
+    console.error("❌ Remove class error:", err.message);
+    return res.status(500).json({ error: "Failed to remove class" });
   }
-}
+};
 
 module.exports = {
-  removeClassFromSchedule
-}
+  removeClassFromSchedule,
+};

@@ -14,7 +14,7 @@ const createNewSchedule = async (req, res) => {
     await pool.query("INSERT INTO userSched (userID, schedID) VALUES ($1, $2)", [userID, schedID])
     const newSchedule = new Schedule({ schedID, userID, semester, scheduleName: "Untitled", classes: [] })
     await newSchedule.save()
-    res.json({ message: "New schedule created", schedID })
+    res.json({ message: "New schedule created", schedID: schedID })
   } catch (err) {
     console.error("❌ createNewSchedule error:", err.message)
     res.status(500).json({ error: "Failed to create schedule" })
@@ -48,17 +48,55 @@ const updateScheduleClasses = async (req, res) => {
 }
 
 // === Load All Schedules for User ===
+const parseTime = (timeStr) => {
+  const [h, m] = timeStr.replace(/AM|PM/i, "").trim().split(":").map(Number);
+  const isPM = timeStr.toUpperCase().includes("PM");
+  const hour = isPM && h !== 12 ? h + 12 : !isPM && h === 12 ? 0 : h;
+  return hour + (m || 0) / 60;
+};
+
+const parseDays = (daysStr) => {
+  const dayMap = {
+    "1": "Monday",
+    "2": "Tuesday",
+    "3": "Wednesday",
+    "4": "Thursday",
+    "5": "Friday",
+    "6": "Saturday",
+    "7": "Sunday"
+  };
+  return daysStr.split("").map(d => dayMap[d]).filter(Boolean);
+};
+
+const transformSchedule = (classes) => {
+  return classes.map(cls => ({
+    course: `${cls.dept} ${cls.code}` + (cls.type === "LBN" ? " LBN" : ""),
+    location: cls.roomNumber ? `${cls.roomNumber}, ${cls.buildingName}` : "TBD",
+    days: parseDays(cls.days || ""),
+    time: parseTime(cls.startTime),
+    duration: Math.abs(parseTime(cls.endTime) - parseTime(cls.startTime)),
+  }));
+};
+
 const loadUserSchedules = async (req, res) => {
-  const { userID } = req.body
-  if (!userID) return res.status(400).json({ error: "Missing userID" })
+  const { userID } = req.body;
+  if (!userID) return res.status(400).json({ error: "Missing userID" });
+
   try {
-    const schedules = await Schedule.find({ userID }).sort({ semester: 1, lastEdited: -1 })
-    res.json({ schedules })
+    const schedules = await Schedule.find({ userID }).sort({ semester: 1, lastEdited: -1 });
+
+    const transformed = schedules.map(s => ({
+      ...s.toObject(),
+      visualSchedule: transformSchedule(s.classes)
+    }));
+
+    res.json({ schedules: transformed });
   } catch (err) {
-    console.error("❌ loadUserSchedules error:", err.message)
-    res.status(500).json({ error: "Failed to load schedules" })
+    console.error("❌ loadUserSchedules error:", err.message);
+    res.status(500).json({ error: "Failed to load schedules" });
   }
-}
+};
+
 
 // === Soft Delete a Schedule ===
 const deleteSchedule = async (req, res) => {

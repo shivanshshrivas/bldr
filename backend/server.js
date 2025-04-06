@@ -9,7 +9,7 @@ const { connectPostgres } = require("./models/pg")
 dotenv.config()
 
 const app = express()
-app.use(cors())
+app.use(cors({ origin: "*" }))
 app.use(express.json())
 
 // Connect databases
@@ -26,13 +26,10 @@ app.use("/api/google", require("./routes/googleRoutes"))
 app.use("/api/chatbot", require("./routes/chatbotRoutes"))
 
 
-
-
-
 // Home
 app.get("/", (req, res) => {
   res.send("Welcome to bldr API 🚀")
 })
 
 const PORT = process.env.PORT || 5000
-app.listen(PORT, () => console.log(`✅ Server running on http://localhost:${PORT}`))
+app.listen(PORT, "0.0.0.0", () => console.log(`✅ Server running on http://localhost:${PORT}`))

@@ -12,8 +12,6 @@ const classSchema = new mongoose.Schema({
   endTime: String,
   days: String,
   instructorName: String,
-  roomNumber: String,
-  buildingName: String
 })
 
 const scheduleSchema = new mongoose.Schema({
