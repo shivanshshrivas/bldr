@@ -1,0 +1,89 @@
+[
+  "EECS 368",
+  "EECS 468.",
+  {
+    "class_code": "EECS 649",
+    "class_name": "Intr to Artificial Intelligenc",
+    "credit_hours": 3,
+    "prerequisite": {
+      "corequisite": [
+        "EECS 368",
+        "EECS 468."
+      ],
+      "other": []
+    },
+    "sections": []
+  },
+  {
+    "class_code": "EECS 658",
+    "class_name": "Intro to Machine Learning",
+    "credit_hours": 3,
+    "prerequisite": {
+      "corequisite": [],
+      "other": [
+        "EECS 330 and EECS 461 or MATH 526 or equivalent and upper-level EECS eligibility."
+      ]
+    },
+    "sections": []
+  },
+  {
+    "class_code": "EECS 665",
+    "class_name": "Compiler Construction",
+    "credit_hours": 4,
+    "prerequisite": {
+      "corequisite": [],
+      "other": [
+        "EECS 348, EECS 468, EECS 510, and upper-level eligibility."
+      ]
+    },
+    "sections": []
+  },
+  {
+    "class_code": "EECS 677",
+    "class_name": "Advnced Software Security Eval",
+    "credit_hours": 3,
+    "prerequisite": {
+      "corequisite": [],
+      "other": [
+        "EECS 348 and upper-level EECS eligibility, or instructor's consent."
+      ]
+    },
+    "sections": []
+  },
+  {
+    "class_code": "EECS 678",
+    "class_name": "Introdctn to Operating Systems",
+    "credit_hours": 4,
+    "prerequisite": {
+      "corequisite": [],
+      "other": [
+        "EECS 388, EECS 348, and upper-level EECS eligibility."
+      ]
+    },
+    "sections": []
+  },
+  {
+    "class_code": "EECS 690",
+    "class_name": "Special Topics:",
+    "credit_hours": 1,
+    "prerequisite": {
+      "corequisite": [],
+      "other": [
+        "Varies by topic, plus Upper-level EECS eligibility and consent of instructor."
+      ]
+    },
+    "sections": []
+  },
+  {
+    "class_code": "EECS 692",
+    "class_name": "Directed Reading",
+    "credit_hours": 1,
+    "prerequisite": {
+      "corequisite": [],
+      "other": [
+        "Upper-level EECS eligibility and consent of instructor."
+      ]
+    },
+    "sections": []
+  }
+]

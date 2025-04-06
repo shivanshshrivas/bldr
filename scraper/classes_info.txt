@@ -19786,3 +19786,1311 @@ Notes TuTh 09:30 - 10:45 AM
 GL 1160 - LAWRENCE
 
 ---------------------------- Class ends here ----------------------------
+Class starts here
+EECS 101
+Elect Engr & Computer Science - New Student Seminar ( 1 ) Fall 2025
+A seminar intended to help connect freshmen and transfer EECS students to the EECS department, their chosen profession, and each other. Topics include overviews of the various disciplines, curricula and advising, ethics and professionalism, student organizations and extracurricular activities, senior projects, and career planning. Graded on a satisfactory/unsatisfactory basis. Prerequisite: Corequisite: MATH 104.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Perrins, Erik 1 14631 (Save) 410
+Notes W 02:00 - 02:50 PM
+BUD 110 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 138
+Elect Engr & Computer Science - Introduction to Computing: ( 3 ) Fall 2025
+Algorithm development, basic computer organization, syntax and semantics of a high-level programming language, including testing and debugging. Concept of structure in data and programs, arrays, top-down design, subroutines and library programs. Abstract data types. System concepts such as compilation and files. Nature and scope of computer science. Not open to electrical engineering, computer engineering, computer science, and interdisciplinary computing majors. Prerequisite: MATH 101 or MATH 104, or meeting the requirements to enroll in MATH 115 or MATH 125 or MATH 145.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Topic: Python   Branicky, Michael 3 18795 (Save) 79
+Notes MW 09:00 - 09:50 AM
+LEEP2 G411 - LAWRENCE
+LBN Topic: Python   3 18796 (Save) 17
+Notes F 09:00 - 09:50 AM
+EATN 1010 - LAWRENCE
+LBN Topic: Python   3 18797 (Save) 17
+Notes W 12:00 - 12:50 PM
+EATN 1010 - LAWRENCE
+LBN Topic: Python   3 18798 (Save) 15
+Notes W 01:00 - 01:50 PM
+EATN 1010 - LAWRENCE
+LBN Topic: Python   3 18799 (Save) 16
+Notes F 10:00 - 10:50 AM
+EATN 1010 - LAWRENCE
+LBN Topic: Python   3 12341 (Save) 1
+Notes W 10:00 - 10:50 AM
+EATN 1010 - LAWRENCE
+LBN Topic: Python   3 12826 (Save) 13
+Notes W 11:00 - 11:50 AM
+EATN 1010 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 140
+Elect Engr & Computer Science - Introd to Digital Logic Design ( 4 ) Fall 2025
+An introductory course in digital logic circuits covering number representation, digital codes, Boolean Algebra, combinatorial logic design, sequential logic design, and programmable logic devices. Grade of C (not C-) required to progress. Prerequisite: Corequisite: MATH 104 or MATH 125.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Mcnaughton, James 4 14124 (Save) 195
+Notes TuTh 02:00 - 03:15 PM
+WES 3139 - LAWRENCE
+LBN 4 19208 (Save) 16
+Notes M 09:00 - 10:50 AM
+EATN 2010 - LAWRENCE
+LBN 4 19209 (Save) 16
+Notes W 09:00 - 10:50 AM
+EATN 2010 - LAWRENCE
+LBN 4 17803 (Save) 16
+Notes Tu 04:00 - 05:50 PM
+EATN 2010 - LAWRENCE
+LBN 4 12343 (Save) 16
+Notes Tu 12:30 - 02:20 PM
+EATN 2010 - LAWRENCE
+LBN 4 12342 (Save) 16
+Notes Th 12:30 - 02:20 PM
+EATN 2010 - LAWRENCE
+LBN 4 14780 (Save) 16
+Notes M 03:00 - 04:50 PM
+EATN 2010 - LAWRENCE
+LBN 4 14781 (Save) 16
+Notes W 03:00 - 04:50 PM
+EATN 2010 - LAWRENCE
+DIS Mcnaughton, James 4 18078 (Save) 195
+Notes M 06:00 - 07:50 PM
+EATN 2 - LAWRENCE
+LBN 4 22112 (Save) 16
+Notes F 09:00 - 10:50 AM
+EATN 2010 - LAWRENCE
+LBN 4 22110 (Save) 16
+Notes F 03:00 - 04:50 PM
+EATN 2010 - LAWRENCE
+LBN 4 26102 (Save) 16
+Notes Tu 10:00 - 11:50 AM
+EATN 2010 - LAWRENCE
+LBN 4 26103 (Save) 16
+Notes Th 10:00 - 11:50 AM
+EATN 2010 - LAWRENCE
+LBN 4 26105 (Save) 14
+Notes Th 04:00 - 05:50 PM
+EATN 2010 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 141
+Elect Engr & Computer Science - Intro to Digital Logic: Honors ( 4 / Honors ) Fall 2025
+An introductory course in digital logic circuits covering number representation, digital codes, Boolean algebra, combinatorial logic design, sequential logic design, and programmable logic devices. This course is intended for highly motivated students and includes honors-level assignments. Grade of C (not C-) required to progress. Prerequisite: Corequisite: MATH 104 or MATH 125, plus either acceptance into the KU Honors Program or consent of instructor.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Mcnaughton, James 4 14290 (Save) 195
+Notes TuTh 02:00 - 03:15 PM
+WES 3139 - LAWRENCE
+LBN 4 19210 (Save) 16
+Notes M 09:00 - 10:50 AM
+EATN 2010 - LAWRENCE
+LBN 4 19211 (Save) 16
+Notes W 09:00 - 10:50 AM
+EATN 2010 - LAWRENCE
+LBN 4 17804 (Save) 16
+Notes Tu 04:00 - 05:50 PM
+EATN 2010 - LAWRENCE
+LBN 4 13353 (Save) 16
+Notes Tu 12:30 - 02:20 PM
+EATN 2010 - LAWRENCE
+LBN 4 13350 (Save) 16
+Notes Th 12:30 - 02:20 PM
+EATN 2010 - LAWRENCE
+LBN 4 14782 (Save) 16
+Notes M 03:00 - 04:50 PM
+EATN 2010 - LAWRENCE
+LBN 4 14783 (Save) 16
+Notes W 03:00 - 04:50 PM
+EATN 2010 - LAWRENCE
+DIS Mcnaughton, James 4 18079 (Save) 195
+Notes M 06:00 - 07:50 PM
+EATN 2 - LAWRENCE
+LBN 4 22111 (Save) 16
+Notes F 09:00 - 10:50 AM
+EATN 2010 - LAWRENCE
+LBN 4 22109 (Save) 16
+Notes F 03:00 - 04:50 PM
+EATN 2010 - LAWRENCE
+LBN 4 26101 (Save) 16
+Notes Tu 10:00 - 11:50 AM
+EATN 2010 - LAWRENCE
+LBN 4 26104 (Save) 16
+Notes Th 10:00 - 11:50 AM
+EATN 2010 - LAWRENCE
+LBN 4 26106 (Save) 3
+Notes Th 04:00 - 05:50 PM
+EATN 2010 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 168
+Elect Engr & Computer Science - Programming I ( 4 ) Fall 2025
+Problem solving using a high level programming language and object oriented software design. Fundamental stages of software development are discussed: problem specification, program design, implementation, testing, and documentation. Introduction to programming using an object oriented language: using classes, defining classes, and extending classes. Introduction to algorithms and data structures useful for problem solving: arrays, lists, files, searching, and sorting. Student will be responsible for designing, implementing, testing, and documenting independent programming projects. Professional ethics are defined and discussed in particular with respect to computer rights and responsibilities. Grade of C (not C-) required to progress. Prerequisite: Corequisite: MATH 104 or MATH 125.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Gibbons, John 4 14320 (Save) 118
+Notes TuTh 09:30 - 10:45 AM
+LEEP2 G411 - LAWRENCE
+LEC Gibbons, John 4 15769 (Save) 155
+Notes MWF 10:00 - 10:50 AM
+LEEP2 2415 - LAWRENCE
+LBN 4 14877 (Save) 19
+Notes M 08:00 - 09:50 AM
+EATN 1005B - LAWRENCE
+LBN 4 13085 (Save) 19
+Notes W 08:00 - 09:50 AM
+EATN 1005B - LAWRENCE
+LBN 4 18328 (Save) 19
+Notes F 08:00 - 09:50 AM
+EATN 1005B - LAWRENCE
+LBN 4 13361 (Save) 19
+Notes M 11:00 - 12:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 18329 (Save) 19
+Notes Tu 11:00 - 12:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 10608 (Save) 19
+Notes W 11:00 - 12:50 PM
+EATN 1005D - LAWRENCE
+LBN 4 12908 (Save) 19
+Notes Tu 02:00 - 03:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 14534 (Save) 19
+Notes Th 02:00 - 03:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 14878 (Save) 19
+Notes M 03:00 - 04:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 12344 (Save) 19
+Notes W 03:00 - 04:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 17805 (Save) 19
+Notes F 11:00 - 12:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 17807 (Save) 19
+Notes F 04:00 - 05:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 26249 (Save) 19
+Notes M 01:00 - 02:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 26251 (Save) 19
+Notes W 11:00 - 12:50 PM
+EATN 1005B - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 169
+Elect Engr & Computer Science - Programming I: Honors ( 4 / Honors ) Fall 2025
+Problem solving using a high level programming language and object oriented software design. Fundamental stages of software development are discussed: problem specification, program design, implementation, testing, and documentation. Introduction to programming using an object oriented language: using classes, defining classes, extending classes. Introduction to algorithms and data structures useful for problem solving: arrays, lists, files, searching, and sorting. Students will be responsible for designing, implementing, testing, and documenting independent programming projects. Professional ethics are defined and discussed in particular with respect to computer rights and responsibilities. This course is intended for highly motivated students and includes honors-level assignments. Grade of C (not C-) required to progress. Prerequisite: Corequisite: MATH 104 or MATH 125, plus either acceptance into the KU Honors Program or consent of instructor.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Gibbons, John 4 15770 (Save) 155
+Notes MWF 10:00 - 10:50 AM
+LEEP2 2415 - LAWRENCE
+LEC Gibbons, John 4 14321 (Save) 118
+Notes TuTh 09:30 - 10:45 AM
+LEEP2 G411 - LAWRENCE
+LBN 4 14879 (Save) 19
+Notes M 08:00 - 09:50 AM
+EATN 1005B - LAWRENCE
+LBN 4 13362 (Save) 19
+Notes W 08:00 - 09:50 AM
+EATN 1005B - LAWRENCE
+LBN 4 18330 (Save) 19
+Notes F 08:00 - 09:50 AM
+EATN 1005B - LAWRENCE
+LBN 4 13364 (Save) 19
+Notes M 11:00 - 12:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 18331 (Save) 19
+Notes Tu 11:00 - 12:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 13363 (Save) 19
+Notes W 11:00 - 12:50 PM
+EATN 1005D - LAWRENCE
+LBN 4 13365 (Save) 19
+Notes Tu 02:00 - 03:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 14535 (Save) 19
+Notes Th 02:00 - 03:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 14880 (Save) 19
+Notes M 03:00 - 04:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 13367 (Save) 19
+Notes W 03:00 - 04:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 17806 (Save) 19
+Notes F 11:00 - 12:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 17808 (Save) 19
+Notes F 04:00 - 05:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 26248 (Save) 19
+Notes M 01:00 - 02:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 26250 (Save) 19
+Notes W 11:00 - 12:50 PM
+EATN 1005B - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 202
+Elect Engr & Computer Science - Circuits I ( 4 ) Fall 2025
+Analysis of linear electrical circuits: Kirchoff's laws; source, resistor, capacitor and inductor models; nodal and mesh analysis; network theorems; transient analysis; Laplace transform analysis; steady-state sinusoidal analysis. The lab provides training and practice in the use of computational tools (e.g., Matlab), computer-aided circuit analysis (e.g., Pspice), and laboratory skills. Prerequisite: Corequisite: MATH 220 or MATH 221 or MATH 320 and MATH 290 or MATH 291.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Demarest, Kenneth 4 18888 (Save) 88
+Notes MWF 02:00 - 02:50 PM
+STFL 100 - LAWRENCE
+LBN 4 18889 (Save) 16
+Notes Tu 01:00 - 02:50 PM
+EATN 3010 - LAWRENCE
+LBN 4 18890 (Save) 16
+Notes F 09:00 - 10:50 AM
+EATN 3010 - LAWRENCE
+LBN 4 19310 (Save) 16
+Notes Th 01:00 - 02:50 PM
+EATN 3010 - LAWRENCE
+LBN 4 20023 (Save) 12
+Notes W 09:00 - 10:50 AM
+EATN 3010 - LAWRENCE
+LBN 4 26243 (Save) 13
+Notes M 09:00 - 10:50 AM
+EATN 3010 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 210
+Elect Engr & Computer Science - Discrete Structures ( 4 ) Fall 2025
+An introduction to the mathematical foundations and techniques of computer science. Throughout, there is an emphasis on general reasoning, problem solving, and technical communication. Topics include basic proof techniques and logic, induction, recurrences, relations, number theory, basic algorithm design and analysis, and applications. Grade of C (not C-) required to progress. Prerequisite: EECS 140 or EECS 141, EECS 168 or EECS 169 (or equivalent) and MATH 126 or MATH 146.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Agah, Arvin 4 13371 (Save) 98
+Notes TuTh 09:30 - 10:45 AM
+JRP 150 - LAWRENCE
+LBN 4 24417 (Save) 15
+Notes M 11:00 - 12:50 PM
+EATN 1005A - LAWRENCE
+LBN 4 24418 (Save) 13
+Notes F 11:00 - 12:50 PM
+EATN 1005A - LAWRENCE
+LBN 4 25542 (Save) 11
+Notes W 11:00 - 12:50 PM
+EATN 1005A - LAWRENCE
+LBN 4 25543 (Save) 13
+Notes Th 04:00 - 05:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 25544 (Save) 16
+Notes M 08:00 - 09:50 AM
+EATN 1005A - LAWRENCE
+LBN 4 25545 (Save) 15
+Notes Tu 04:00 - 05:50 PM
+EATN 1005A - LAWRENCE
+LBN 4 25546 (Save) 19
+Notes W 08:00 - 09:50 AM
+EATN 1005A - LAWRENCE
+LBN 4 25547 (Save) 15
+Notes F 08:00 - 09:50 AM
+EATN 1005A - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 212
+Elect Engr & Computer Science - Circuits II ( 4 ) Fall 2025
+Continued study of electrical circuits: Steady-state power analysis, three-phase circuits, transformers, frequency response, and two-port network analysis. Grade of C (not C-) required to progress. Prerequisite: EECS 211 or EECS 202.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC McCormick, Patrick 4 10606 (Save) 11
+Notes MWF 10:00 - 10:50 AM
+LEA 2112 - LAWRENCE
+LBN 4 14465 (Save) Full
+Notes M 01:00 - 02:50 PM
+EATN 3010 - LAWRENCE
+LBN 4 10607 (Save) 9
+Notes Th 11:00 - 12:50 PM
+EATN 3010 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 220
+Elect Engr & Computer Science - Electromagnetics I ( 4 ) Fall 2025
+Vector analysis. Electrostatic and magnetostatic fields in a vacuum and material media. Electromagnetic fields and Maxwell's equations for time-varying sources. The relationship between field and circuit theory. Simple applications of Maxwell's equations. Grade of C (not C-) required to progress. Prerequisite: MATH 220 or MATH 221 or MATH 320 and MATH 290 or MATH 291 and EPHX 210 or PHSX 210 or PHSX 211 or PHSX 213 and EECS 202.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Demarest, Kenneth 4 24401 (Save) 40
+Notes MWF 12:00 - 12:50 PM
+LEA 2112 - LAWRENCE
+Tu 03:30 - 04:20 PM
+LEA 2112 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 268
+Elect Engr & Computer Science - Programming II ( 4 ) Fall 2025
+This course continues developing problem solving techniques by focusing on the imperative and object-oriented styles using Abstract Data Types. Basic data structures such as queues, stacks, trees, and graphs will be covered. Recursion. Basic notions of algorithmic efficiency and performance analysis in the context of sorting algorithms. Basic Object-Oriented techniques. An associated laboratory will develop projects reinforcing the lecture material. Three class periods and one laboratory period per week. Grade of C (not C-) required to progress. Prerequisite: EECS 168 or EECS 169.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Gibbons, John 4 10609 (Save) 51
+Notes MWF 12:00 - 12:50 PM
+LEEP2 2425 - LAWRENCE
+LEC Gibbons, John 4 15771 (Save) 69
+Notes TuTh 11:00 - 12:15 PM
+LEEP2 2300 - LAWRENCE
+LBN 4 18332 (Save) 18
+Notes M 09:00 - 10:50 AM
+EATN 1005C - LAWRENCE
+LBN 4 12345 (Save) 18
+Notes F 09:00 - 10:50 AM
+EATN 1005C - LAWRENCE
+LBN 4 12827 (Save) 19
+Notes Tu 09:00 - 10:50 AM
+EATN 1005C - LAWRENCE
+LBN 4 15181 (Save) 17
+Notes Th 01:00 - 02:50 PM
+EATN 1005C - LAWRENCE
+LBN 4 14821 (Save) 18
+Notes M 03:00 - 04:50 PM
+EATN 1005C - LAWRENCE
+LBN 4 12547 (Save) 18
+Notes W 03:00 - 04:50 PM
+EATN 1005C - LAWRENCE
+LBN 4 15172 (Save) 18
+Notes Tu 04:00 - 05:50 PM
+EATN 1005C - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 312
+Elect Engr & Computer Science - Electronic Circuits I ( 3 ) Fall 2025
+Introduction to diodes, BJTs and MOSFETs, and their use in electronic circuits, especially digital circuits. Prerequisite: Upper-level eligibility. Corequisite: EECS 212.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Fardad, Shima 3 10610 (Save) Full
+Notes MWF 09:00 - 09:50 AM
+LEA 3151 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 330
+Elect Engr & Computer Science - Data Structures and Algorithms ( 4 ) Fall 2025
+A first course in abstract data structures and algorithmic design making use of these structures. Topics include asymptotic analysis, trees, dictionaries, heaps, disjoint set structures; divide and conquer, greedy, and dynamic programming algorithms. Prerequisite: EECS 210, EECS 268, and upper-level EECS eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Shomaji, Sumaiya 4 21349 (Save) 89
+Notes MWF 10:00 - 10:50 AM
+SUM 427 - LAWRENCE
+LBN 4 21737 (Save) 15
+Notes M 08:00 - 09:50 AM
+EATN 1005D - LAWRENCE
+LBN 4 21738 (Save) 11
+Notes Tu 02:00 - 03:50 PM
+EATN 1005C - LAWRENCE
+LBN 4 21739 (Save) 13
+Notes F 11:00 - 12:50 PM
+EATN 1005D - LAWRENCE
+LBN 4 21740 (Save) 17
+Notes F 02:00 - 03:50 PM
+EATN 1005D - LAWRENCE
+LBN 4 21792 (Save) 17
+Notes W 08:00 - 09:50 AM
+EATN 1005D - LAWRENCE
+LBN 4 21863 (Save) 10
+Notes Tu 04:00 - 05:50 PM
+EATN 1005B - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 348
+Elect Engr & Computer Science - Software Engineering I ( 4 ) Fall 2025
+This course is an introduction to software development fundamentals and software engineering. It incorporates a thorough introduction to a compiled programming language. A baseline knowledge of tools and utilities is covered including the shell, common programs, version control, IDEs, editors, and build tools. Topics include: software development principles (e.g., design patterns, modularity, loose coupling), extending larger codebases, developing larger codebases, continuous integration, continuous deployment, debugging, unit testing, test-driven development, and databases. Grade of C (not C-) required to progress. Prerequisite: EECS 268.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Johnson, David 4 21362 (Save) 122
+Notes TuTh 02:00 - 03:15 PM
+EATN 2 - LAWRENCE
+LBN 4 21716 (Save) 4
+Notes W 09:00 - 10:50 AM
+EATN 1005C - LAWRENCE
+LBN 4 21717 (Save) 13
+Notes W 01:00 - 02:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 21718 (Save) 16
+Notes Th 09:00 - 10:50 AM
+EATN 1005C - LAWRENCE
+LBN 4 21719 (Save) 15
+Notes Th 11:00 - 12:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 21720 (Save) 17
+Notes F 01:00 - 02:50 PM
+EATN 1005B - LAWRENCE
+LBN 4 21722 (Save) 19
+Notes F 03:00 - 04:50 PM
+EATN 1005C - LAWRENCE
+LBN 4 21723 (Save) 17
+Notes W 01:00 - 02:50 PM
+EATN 1005D - LAWRENCE
+LBN 4 21861 (Save) 14
+Notes Th 04:00 - 05:50 PM
+EATN 1005C - LAWRENCE
+LBN 4 21862 (Save) 18
+Notes F 04:00 - 05:50 PM
+EATN 1005D - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 361
+Elect Engr & Computer Science - Signal and System Analysis ( 3 ) Fall 2025
+Fourier signal analysis (series and transform); linear system analysis (continuous and discrete); z-transforms, analog and digital filter analysis; analysis and design of continuous and discrete time system using MATLAB. Prerequisite: EECS 212 and EECS Upper Level Eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Frost, Victor 3 20022 (Save) 6
+Notes TuTh 02:00 - 03:15 PM
+LEEP2 2420 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 388
+Elect Engr & Computer Science - Embedded Systems ( 4 ) Fall 2025
+This course will address internal organization of micro-controller systems, sometimes called embedded systems, used in a wide variety of engineered systems: programming in C and assembly language; input and output systems; collecting data from sensors; and controlling external devices. This course will focus on one or two specific microprocessors, software development and organization, and building embedded systems. Prerequisite: EECS 140 or EECS 141, EECS 168 or EECS 169, and upper-level EECS eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Schoonover, Jacob 4 10611 (Save) 140
+Notes TuTh 11:00 - 12:15 PM
+EATN 2 - LAWRENCE
+LBN 4 15622 (Save) 12
+Notes M 08:00 - 09:50 AM
+EATN 3002 - LAWRENCE
+LBN 4 13376 (Save) 10
+Notes Tu 08:00 - 09:50 AM
+EATN 3002 - LAWRENCE
+LBN 4 14451 (Save) 14
+Notes Th 08:00 - 09:50 AM
+EATN 3002 - LAWRENCE
+LBN 4 10612 (Save) 10
+Notes M 02:00 - 03:50 PM
+EATN 3002 - LAWRENCE
+LBN 4 13374 (Save) 9
+Notes W 02:00 - 03:50 PM
+EATN 3002 - LAWRENCE
+LBN 4 16305 (Save) 7
+Notes Tu 01:00 - 02:50 PM
+EATN 3002 - LAWRENCE
+LBN 4 19291 (Save) 13
+Notes W 08:00 - 09:50 AM
+EATN 3002 - LAWRENCE
+LBN 4 19292 (Save) 14
+Notes F 08:00 - 09:50 AM
+EATN 3002 - LAWRENCE
+LBN 4 21954 (Save) 11
+Notes F 02:00 - 03:50 PM
+EATN 3002 - LAWRENCE
+LBN 4 27874 (Save) 7
+Notes M 12:00 - 01:50 PM
+EATN 3002 - LAWRENCE
+LBN 4 27875 (Save) 8
+Notes W 12:00 - 01:50 PM
+EATN 3002 - LAWRENCE
+LBN 4 27876 (Save) 13
+Notes F 12:00 - 01:50 PM
+EATN 3002 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 399
+Elect Engr & Computer Science - Projects ( 1-5 ) Fall 2025
+An electrical engineering, computer engineering, or computer science project pursued under the student's initiative, culminating in a comprehensive report, with special emphasis on orderly preparation and effective composition. Prerequisite: Upper-level EECS eligibility and consent of instructor.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+IND Agah, Arvin 1-5 10613 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Alexander, Perry 1-5 10614 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Aly, Esam Eldin 1-5 16792 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Bardas, Alexandru 1-5 17296 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Blunt, Shannon 1-5 12750 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Branicky, Michael 1-5 17858 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Brumberg, Jonathan 1-5 15636 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Davidson, Andrew 1-5 18042 (Save) 30
+Notes APPT
+KULC APPT - LAWRENCE
+IND Demarest, Kenneth 1-5 10616 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Fardad, Shima 1-5 17769 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Frost, Victor 1-5 10617 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Gibbons, John 1-5 15637 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Mcnaughton, James 1-5 13668 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Hashemi, Morteza 1-5 17770 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Hui, Rongqing 1-5 10618 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Johnson, David 1-5 18043 (Save) 30
+Notes APPT
+KULC APPT - LAWRENCE
+IND Kim, Taejoon 1-5 17297 (Save) Unopened
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Kulkarni, Prasad 1-5 13378 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Leuschen, Carlton 1-5 12981 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Li, Fengjun 1-5 14632 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Luo, Bo 1-5 13669 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND McCormick, Patrick 1-5 17771 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Guria, Sankha 1-5 19866 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Perrins, Erik 1-5 12717 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Petr, David 1-5 10619 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Salandrino, Alessandro 1-5 15740 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Shontz, Suzanne 1-5 15739 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Stiles, James 1-5 10620 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Yun, Heechul 1-5 15296 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Zhong, Cuncong 1-5 17119 (Save) 30
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Yao, Zijun 1-5 22296 (Save) 30
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 420
+Elect Engr & Computer Science - Electromagnetics II ( 4 ) Fall 2025
+This course applies electromagnetic analysis to high frequency devices and systems where wave propagation effects cannot be neglected. Topics covered include transmission lines, space waves, waveguides, radiation, and antennas. Laboratory experiments include transmission line, waveguide, and antenna measurements and characterizations. 3 hours lecture, 1 hour laboratory. Prerequisite: EECS 220 and upper-level EECS eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Salandrino, Alessandro 4 14322 (Save) 7
+Notes MWF 12:00 - 12:50 PM
+LEA 1136 - LAWRENCE
+LBN 4 14323 (Save) Full
+Notes M 01:00 - 02:50 PM
+EATN 2060 - LAWRENCE
+LBN 4 14537 (Save) 6
+Notes F 01:00 - 02:50 PM
+EATN 2060 - LAWRENCE
+LBN 4 15167 (Save) 1
+Notes M 03:00 - 04:50 PM
+EATN 2060 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 447
+Elect Engr & Computer Science - Introductn to Database Systems ( 3 ) Fall 2025
+Introduction to the concept of databases and their operations. Basic concepts, database architectures, storage structures and indexing, data structures: hierarchical, network, and relational database organizations. Database design and normalization: ER model, candidates keys, functional dependencies, normal forms, decomposition. Emphasis on relational databases, relational algebra, and SQL. Introduction to views, transactions, and database access control. Introduction to database security, big data, NoSQL, CAP theorem, key-value stores. Prerequisite: Upper-level EECS eligibility or departmental consent.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Saiedian, Hossein 3 25822 (Save) 64
+Notes TuTh 09:30 - 10:45 AM
+MAL 2074 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 461
+Elect Engr & Computer Science - Probability and Statistics ( 3 ) Fall 2025
+Introduction to probability and statistics with applications. Reliability of systems. Discrete and continuous random variables. Expectations, functions of random variables, and linear regression. Sampling distributions, confidence intervals, and hypothesis testing. Joint, marginal, and conditional distribution and densities. Prerequisite: MATH 127 or MATH 147, and MATH 290 or MATH 291, and upper-level EECS eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Petr, David 3 20183 (Save) 130
+Notes TuTh 12:30 - 01:45 PM
+EATN 2 - LAWRENCE
+DIS Petr, David 3 20472 (Save) 130
+Notes M 05:00 - 06:50 PM
+WES 3139 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 465
+Elect Engr & Computer Science - Cyber Defense ( 3 ) Fall 2025
+An introduction to critical knowledge and skills needed to administer and defend computer networks and systems. This course focuses on hands-on activities, learning cybersecurity defensive techniques, and understanding well know techniques used by adversaries. Prerequisite: EECS 268. Corequisite: EECS 388.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Bardas, Alexandru 3 18880 (Save) Unopened
+Notes TuTh 02:00 - 02:50 PM
+HAW 1005 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 468
+Elect Engr & Computer Science - Programming Paradigms ( 3 ) Fall 2025
+This course is a survey of programming languages: their attributes, uses, advantages, and disadvantages. Topics include the evolution of programming languages; programming language processing (i.e., compilation, interpretation, and mixed approaches); imperative, functional, and declarative languages; parameter passing and evaluation order; iteration, recursion, and continuation; and the basics of cloud programming (i.e., web services, client/server, synchronous vs. asynchronous programming, building reliable systems, and programming at scale). Prerequisite: EECS 268 and upper-level EECS eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Johnson, David 3 21363 (Save) 75
+Notes MWF 11:00 - 11:50 AM
+LEEP2 2300 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 470
+Elect Engr & Computer Science - Elctr Devices&Proprt of Matrls ( 3 ) Fall 2025
+An introduction to crystal structures, and metal, insulator, and semiconductor properties. Topics covered include the thermal, electric, dielectric, and optical properties of these materials. A significant portion of this course is devoted to the properties of semiconductors and semiconductor devices. Prerequisite: PHSX 313 and upper-level EECS eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Salandrino, Alessandro 3 10621 (Save) 11
+Notes MWF 10:00 - 10:50 AM
+LEA 1136 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 498
+Elect Engr & Computer Science - Honors Research ( 1-2 / Honors ) Fall 2025
+Arranged to allow students to satisfy the independent research requirement for graduation with departmental honors. Prerequisite: Consent of instructor and upper-level EECS eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+IND Agah, Arvin 1-2 10622 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Alexander, Perry 1-2 10623 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Aly, Esam Eldin 1-2 16793 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Bardas, Alexandru 1-2 17298 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Blunt, Shannon 1-2 12751 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Branicky, Michael 1-2 17859 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Guria, Sankha 1-2 16185 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Davidson, Andrew 1-2 18044 (Save) 30
+Notes APPT
+KULC APPT - LAWRENCE
+IND Demarest, Kenneth 1-2 10625 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Fardad, Shima 1-2 17772 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Frost, Victor 1-2 10626 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Hashemi, Morteza 1-2 17773 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Hui, Rongqing 1-2 10627 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Zhong, Cuncong 1-2 17299 (Save) Unopened
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Kulkarni, Prasad 1-2 13379 (Save) 9
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Leuschen, Carlton 1-2 12982 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Li, Fengjun 1-2 14633 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Luo, Bo 1-2 13675 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Wang, Han 1-2 17774 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Perrins, Erik 1-2 12718 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Petr, David 1-2 10628 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Salandrino, Alessandro 1-2 15741 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Shontz, Suzanne 1-2 15742 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Stiles, James 1-2 10629 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Yun, Heechul 1-2 17153 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Johnson, David 1-2 17120 (Save) 30
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 501
+Elect Engr & Computer Science - Senior Design Laboratory I ( 3 ) Fall 2025
+A lecture/laboratory course involving the design and implementation of prototypes of electrical and computer type products and systems. The project specifications require consideration of ethics, economics, manufacturing, and safety. Intended for students graduating the following calendar year. EECS 501 should be immediately followed by EECS 502 in the following semester. Prerequisite: EECS 220 or EECS 221, EECS 361, and EECS 412.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Mcnaughton, James 3 19830 (Save) 9
+Notes TuTh 01:00 - 01:50 PM
+LEEP2 2420 - LAWRENCE
+LBN 3 19831 (Save) 9
+Notes Tu 02:00 - 03:50 PM
+EATN 3003 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 510
+Elect Engr & Computer Science - Introdn to Theory of Computing ( 3 ) Fall 2025
+Finite state automata and regular expressions. Context-free grammars and pushdown automata. Turing machines. Models of computable functions and undecidable problems. The course emphasis is on the theory of computability, especially on showing limits of computation. (Same as MATH 510.) Prerequisite: EECS 210 and upper-level EECS eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Lohoefener, Jennifer 3 12551 (Save) 59
+Notes TuTh 08:00 - 09:15 AM
+LEEP2 G411 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 541
+Elect Engr & Computer Science - Computer Systems Design Labr I ( 3 ) Fall 2025
+A two semester lecture/laboratory course involving the specification, design, implementation, analysis, and documentation of a significant hardware and software computer system. Laboratory work involves software, hardware, and hardware/software trade-offs. Project requirements include consideration of ethics, economics, manufacturing, safety, and health aspects of product development. Intended for students graduating the following calendar year. EECS 541 should be immediately followed by EECS 542 in the following semester. Prerequisite: EECS 443 and EECS 348.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Mcnaughton, James 3 19832 (Save) 6
+Notes MW 11:00 - 11:50 AM
+LEEP2 1420 - LAWRENCE
+LBN 3 19833 (Save) 6
+Notes W 08:00 - 09:50 AM
+EATN 3003 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 545
+Elect Engr & Computer Science - Electrc Energy Prductn&Storage ( 3 ) Fall 2025
+An introduction to the design of utility scale and small scale (distributed generation) electric energy production and storage systems. This course addresses the technical, operational, economic, and environmental characteristics associated with both traditional and nontraditional electric energy production systems along with associated grid integration, energy delivery, and regulatory issues. Traditional energy production systems covered include fossil fuel, hydroelectric, and nuclear power plants. Non-traditional energy productions systems covered include fuel cells, photovoltaics (PV), concentrated solar power (CSP), wind, geothermal, and other emerging technologies. (Same as ARCE 545.) Prerequisite: ARCE 540, or EECS 212 and Upper-Level EECS Eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Panethiere, Michael 3 19677 (Save) 13
+Notes TuTh 11:00 - 12:15 PM
+LEA 2133 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 547
+Elect Engr & Computer Science - Power System Analysis ( 3 ) Fall 2025
+Introduction to the analysis of commercial, industrial, and utility power systems. Emphasis is placed on modeling system components which include transmission and distribution lines, transformers, induction machines, and synchronous machines and the development of a power system model for analysis from these components. System modeling will be applied to short-circuit studies and used to analyze symmetrical faults, to develop sequence networks using symmetrical components, and analyze unsymmetrical faults. (Same as ARCE 547.) Prerequisite: ARCE 540, or EECS 212 and Upper-Level EECS Eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Panethiere, Michael 3 19678 (Save) 23
+Notes TuTh 12:30 - 01:45 PM
+LEA 2112 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 563
+Elect Engr & Computer Science - Intr to Communication Networks ( 3 ) Fall 2025
+An introduction to the principles used in communication networks is given in this course. Topics include a discussion of the uses of communications networks, network traffic, network impairments, standards, layered reference models for organizing network functions. Local Area Network technology and protocols are discussed. Link, network, transport layer protocols, and security are introduced. TCP/IP networks are stressed. VoIP is used as an example throughout the course. Basic concepts of network performance evaluation are studied, both analytical and simulation techniques are considered. Prerequisite: EECS 168 and MATH 526 or EECS 461 and Upper-Level EECS Eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Hashemi, Morteza 3 14324 (Save) 45
+Notes TuTh 09:30 - 10:45 AM
+LEEP2 2300 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 565
+Elect Engr & Computer Science - Intro Informatn&Cmptr Security ( 3 ) Fall 2025
+An introduction to the fundamentals of cryptography and information and computer security. Introduces the basic concepts, theories, and protocols in computer security. Discusses how to apply such knowledge to analyze, design and manage secure systems in the real world. Topic covered: the basics of cryptography, software security, operating system security, database security, network security, privacy and anonymity, social engineering, digital forensics, etc. Prerequisite: Upper-Level EECS Eligibility. Corequisite: EECS 678.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Li, Fengjun 3 21352 (Save) 104
+Notes MWF 12:00 - 12:50 PM
+EATN 2 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 568
+Elect Engr & Computer Science - Introduction to Data Mining ( 3 ) Fall 2025
+This course studies algorithms and computational paradigms to discover knowledge in large and complex datasets. The course explains the fundamental principles, technical details, and real-life applications of data mining techniques through lectures, case studies, and hands-on projects. The core topics to be covered include data preprocessing, classification models, cluster analysis, association analysis, anomaly detection, result evaluation and visualization. Prerequisite: EECS 330 or EECS 560, EECS 461 or MATH 526, and MATH 290.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Yao, Zijun 3 21755 (Save) 9
+Notes TuTh 02:00 - 03:15 PM
+LEEP2 G415 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 569
+Elect Engr & Computer Science - Computer Forensics ( 3 ) Fall 2025
+This course covers both the theoretical and practical aspects of computer forensics. The course introduces the basic concepts, methodologies, and techniques to recover, preserve, and examine digital evidence on or transmitted by digital devices. Topics include: crime investigation and digital evidence, file system forensics, application analysis, network evidence acquisition and analysis, mobile device forensics, etc. Prerequisite: Corequisite: EECS 565.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Luo, Bo 3 18884 (Save) Full
+Notes TuTh 11:00 - 12:15 PM
+EATN 2003 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 581
+Elect Engr & Computer Science - Software Engineering II ( 3 ) Fall 2025
+This lecture/laboratory course covers the systematic development of software products. Topics include: scope of software engineering, life-cycle models, software process, teams, ethics, tools, testing, planning, and estimating. It concentrates on requirements, analysis, design, implementation, and maintenance of software products. Prerequisite: EECS 348, EECS 330, and upper-level EECS eligibility. Corequisite: EECS 565.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Saiedian, Hossein 3 19834 (Save) 51
+Notes MF 04:00 - 04:50 PM
+EATN 2 - LAWRENCE
+LBN 3 19835 (Save) Full
+Notes APPT
+KULC APPT - LAWRENCE
+LBN 3 19836 (Save) Full
+Notes APPT
+KULC APPT - LAWRENCE
+LBN 3 19837 (Save) Full
+Notes APPT
+KULC APPT - LAWRENCE
+LBN 3 19838 (Save) 8
+Notes APPT
+KULC APPT - LAWRENCE
+LBN 3 19839 (Save) 24
+Notes APPT
+KULC APPT - LAWRENCE
+LBN 3 20877 (Save) 19
+Notes APPT
+KULC APPT - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 611
+Elect Engr & Computer Science - Electromagnetic Compatibility ( 3 ) Fall 2025
+A study of unwanted generation and reception of radio-frequency radiation from analog and digital electronic systems and how these emissions/receptions can be reduced. Topics covered include sources of radiation, grounding, shielding, crosstalk, electrostatic discharge, and practical design and layout schemes for reducing unwanted radiation and reception. Also covered are the major governmental electromagnetic compatibility (EMC) regulations and standards that apply to commercial electronic devices and systems. Prerequisite: EECS 220 or EECS 221 and EECS 312.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Demarest, Kenneth 3 26581 (Save) 16
+Notes TuTh 09:30 - 10:45 AM
+LEA 3152 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 622
+Elect Engr & Computer Science - Microwav&Radio Transmsn Systms ( 3 ) Fall 2025
+Introduction to radio transmission systems. Topics include radio transmitter and receiver design, radiowave propagation phenomenology, antenna performance and basic design, and signal detection in the presence of noise. Students will design radio systems to meet specified performance measure. Prerequisite: Corequisite: EECS 420 and MATH 526 or EECS 461.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Stiles, James 3 12890 (Save) 14
+Notes MWF 11:00 - 11:50 AM
+LEA 3150 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 630
+Elect Engr & Computer Science - Adv Data Structures & Algothms ( 3 ) Fall 2025
+A second course in abstract data structures and algorithmic design making use of these structures. Emphasis will be on understanding the high-level theoretical intuitions and principles, as well as a concrete understanding of implementation and applications. Topics include advanced treatment of trees, heaps, disjoint set structures, network flow, greedy algorithms, divide and conquer, dynamic programming, and complexity theory. Prerequisite: Upper-level EECS eligibility, EECS 330 and either EECS 461 or MATH 526.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Zhong, Cuncong 3 21364 (Save) 10
+Notes MWF 11:00 - 11:50 AM
+LEA 2112 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 643
+Elect Engr & Computer Science - Computer Architecture ( 3 ) Fall 2025
+The structure and design of computing systems. Examination and analysis of computing systems. Examination and analysis of instruction set architectures, pipelined control and arithmetic units, vector processors, memory hierarchies, and performance evaluation. Prerequisite: EECS 443.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Aly, Esam Eldin 3 20182 (Save) 33
+Notes MWF 12:00 - 12:50 PM
+LEEP2 2300 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 644
+Elect Engr & Computer Science - Intr Digital Signal Processing ( 3 ) Fall 2025
+Discrete time signal and systems theory, sampling theorem, z-transforms, digital filter design, discrete Fourier transform, FFT, and hardware considerations. Prerequisite: EECS 361.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Blunt, Shannon 3 18881 (Save) 23
+Notes TuTh 08:00 - 09:15 AM
+LEA 3150 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 645
+Elect Engr & Computer Science - Computer Systems Architecture ( 3 ) Fall 2025
+This is an introductory course to the design of single-chip microprocessors and systems. The course covers materials including instruction set architecture, datapath design, control path design, pipelining, multiple-issue superscalar processors, out-of-order processors, memory hierarchy, memory management, multicore, caches, memory technologies, data parallel architectures, interrupts and I/O structures. Only one of EECS 643 and EECS 645 may be used to satisfy EECS degree requirements. Prerequisite: EECS 388.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Schoonover, Jacob 3 13786 (Save) 65
+Notes MWF 03:00 - 03:50 PM
+LEEP2 2300 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 649
+Elect Engr & Computer Science - Intr to Artificial Intelligenc ( 3 ) Fall 2025
+General concepts, search procedures, two-person games, predicate calculus and automated theorem proving, nonmonotonic logic, probabilistic reasoning, rule based systems, semantic networks, frames, dynamic memory, planning, machine learning, natural language understanding, neural networks. Prerequisite: Corequisite: EECS 368 or EECS 468.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Wang, Dongjie 3 26582 (Save) 11
+Notes TuTh 02:00 - 03:15 PM
+STFL 100 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 658
+Elect Engr & Computer Science - Intro to Machine Learning ( 3 ) Fall 2025
+This course provides an introduction to the basic methods of machine learning and how to apply them to solve software engineering problems. Topics covered are: supervised learning, unsupervised learning, and reinforcement learning methods; feature selection techniques; structuring machine learning solutions; and evaluation metrics. Prerequisite: EECS 330 and EECS 461 or MATH 526 or equivalent and upper-level EECS eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Johnson, David 3 19618 (Save) Full
+Notes TuTh 04:00 - 05:15 PM
+LEEP2 2415 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 665
+Elect Engr & Computer Science - Compiler Construction ( 4 ) Fall 2025
+Compilation of programming language constructs. Organization of a compiler including symbol tables, lexical analysis, syntax analysis, intermediate and object code generation, error diagnostics, code optimization techniques and run-time structures in a block-structured language such as C or Rust. Programming assignments include construction of various modules of a compiler. Prerequisite: EECS 348, EECS 468, EECS 510, and upper-level eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Davidson, Andrew 4 21729 (Save) 48
+Notes MWF 03:00 - 03:50 PM
+LEEP2 G411 - LAWRENCE
+LBN 4 21734 (Save) 17
+Notes Th 10:00 - 11:50 AM
+EATN 1005D - LAWRENCE
+LBN 4 21735 (Save) 4
+Notes Tu 11:00 - 12:50 PM
+EATN 1005D - LAWRENCE
+LBN 4 21736 (Save) Full
+Notes Th 12:00 - 01:50 PM
+EATN 1005D - LAWRENCE
+LBN 4 25792 (Save) 16
+Notes Tu 08:00 - 09:50 AM
+EATN 1005D - LAWRENCE
+LBN 4 25793 (Save) 6
+Notes M 10:00 - 11:50 AM
+EATN 1005D - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 677
+Elect Engr & Computer Science - Advnced Software Security Eval ( 3 ) Fall 2025
+Heuristic and formal analysis of software systems with an emphasis on integrity and secrecy. Students in the course will learn to assess the quality, vulnerabilities, and behavior of software. Topics include bug finding, anomaly detection, dynamic analysis, static analysis, dataflow analysis, fuzzing, linting, software supply chain auditing, and security best practices. Prerequisite: EECS 348 and upper-level EECS eligibility, or instructor's consent.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Davidson, Andrew 3 21731 (Save) 50
+Notes MWF 02:00 - 02:50 PM
+LEEP2 G415 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 678
+Elect Engr & Computer Science - Introdctn to Operating Systems ( 4 ) Fall 2025
+The objective of this course is to provide the students with the concepts necessary to enable them to: a) identify the abstract services common to all operating system, b) define the basic system components that support the operating system's machine independent abstractions on particular target architectures, c) consider how the design and implementation of different systems components interact and constrain one another, not merely how one or two important parts work in isolation, and d) understand the means by which fundamental problems in operating systems can be analyzed and addressed. Programming assignments address topics including process creation, inter-process communication, system call implementation, process scheduling and virtual memory. Laboratory exercises primarily focus on use of tools and concepts required for the programming assignments but include a small number of independent topics. Prerequisite: EECS 388, EECS 348, and upper-level EECS eligibility.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Kulkarni, Prasad 4 15506 (Save) 83
+Notes MWF 02:00 - 02:50 PM
+EATN 2 - LAWRENCE
+LBN 4 15515 (Save) 16
+Notes Tu 04:00 - 05:50 PM
+EATN 1005D - LAWRENCE
+LBN 4 15516 (Save) 10
+Notes F 09:00 - 10:50 AM
+EATN 1005D - LAWRENCE
+LBN 4 20028 (Save) 3
+Notes Th 02:00 - 03:50 PM
+EATN 1005D - LAWRENCE
+LBN 4 21776 (Save) 4
+Notes W 03:00 - 04:50 PM
+EATN 1005D - LAWRENCE
+LBN 4 21780 (Save) 8
+Notes M 03:00 - 04:50 PM
+EATN 1005D - LAWRENCE
+LBN 4 21800 (Save) 10
+Notes M 12:00 - 01:50 PM
+EATN 1005D - LAWRENCE
+LBN 4 21956 (Save) 11
+Notes M 12:00 - 01:50 PM
+EATN 1005C - LAWRENCE
+LBN 4 21955 (Save) 13
+Notes Th 04:00 - 05:50 PM
+EATN 1005D - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 690
+Elect Engr & Computer Science - Special Topics: ( 1-3 ) Fall 2025
+Arranged as needed to present appropriate material to groups of students. May be repeated for additional credit. Prerequisite: Varies by topic, plus Upper-level EECS eligibility and consent of instructor.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Topic: Embedded ML   Yun, Heechul 3 19909 (Save) 17
+Notes TuTh 08:00 - 09:15 AM
+LEA 2112 - LAWRENCE
+LEC Topic: Hardware Security   Hoque, Tamzidul 3 25808 (Save) Full
+Notes TuTh 09:30 - 10:45 AM
+LEA 1136 - LAWRENCE
+LEC Topic: Introduction to VLSI   Hoque, Tamzidul 1-3 26583 (Save) 26
+Notes TuTh 02:30 - 03:45 PM
+LEA 1136 - LAWRENCE
+
+
+---------------------------- Class ends here ----------------------------
+
+Class starts here
+EECS 692
+Elect Engr & Computer Science - Directed Reading ( 1-3 ) Fall 2025
+Reading under the supervision of an instructor on a topic chosen by the student with the advice of the instructor. May be repeated for additional credit. Consent of the department required for enrollment. Prerequisite: Upper-level EECS eligibility and consent of instructor.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+IND Agah, Arvin 1-3 10631 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Alexander, Perry 1-3 10632 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Aly, Esam Eldin 1-3 16794 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Bardas, Alexandru 1-3 17300 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Blunt, Shannon 1-3 12752 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Branicky, Michael 1-3 17860 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Guria, Sankha 1-3 15638 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Davidson, Andrew 1-3 18045 (Save) 30
+Notes APPT
+KULC APPT - LAWRENCE
+IND Demarest, Kenneth 1-3 10634 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Fardad, Shima 1-3 17775 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Frost, Victor 1-3 10635 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Gibbons, John 1-3 15639 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Hashemi, Morteza 1-3 17776 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Hui, Rongqing 1-3 10636 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Kim, Taejoon 1-3 17301 (Save) Unopened
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Kulkarni, Prasad 1-3 13380 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Leuschen, Carlton 1-3 12987 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Li, Fengjun 1-3 14634 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Luo, Bo 1-3 13679 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Wang, Han 1-3 17777 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Perrins, Erik 1-3 12719 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Petr, David 1-3 10637 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Salandrino, Alessandro 1-3 15743 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Shontz, Suzanne 1-3 15744 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Stiles, James 1-3 10638 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Saiedian, Hossein 1-3 10630 (Save) 10
+Notes APPT
+KUEC APPT - EDWARDS
+Dept Req
+IND Yun, Heechul 1-3 17856 (Save) 10
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+IND Zhong, Cuncong 1-3 17121 (Save) 30
+Notes APPT
+KULC APPT - LAWRENCE
+Dept Req
+
+---------------------------- Class ends here ----------------------------
