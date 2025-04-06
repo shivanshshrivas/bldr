@@ -1,0 +1,34 @@
+Class starts here
+EECS 268
+Elect Engr & Computer Science - Programming II ( 4 ) Fall 2025
+This course continues developing problem solving techniques by focusing on the imperative and object-oriented styles using Abstract Data Types. Basic data structures such as queues, stacks, trees, and graphs will be covered. Recursion. Basic notions of algorithmic efficiency and performance analysis in the context of sorting algorithms. Basic Object-Oriented techniques. An associated laboratory will develop projects reinforcing the lecture material. Three class periods and one laboratory period per week. Grade of C (not C-) required to progress. Prerequisite: EECS 168 or EECS 169.
+Type Time/Place and Instructor Credit Hours Class # Seats Available
+LEC Gibbons, John 4 10609 (Save) 51
+Notes MWF 12:00 - 12:50 PM
+LEEP2 2425 - LAWRENCE
+LEC Gibbons, John 4 15771 (Save) 70
+Notes TuTh 11:00 - 12:15 PM
+LEEP2 2300 - LAWRENCE
+LBN 4 18332 (Save) 18
+Notes M 09:00 - 10:50 AM
+EATN 1005C - LAWRENCE
+LBN 4 12345 (Save) 18
+Notes F 09:00 - 10:50 AM
+EATN 1005C - LAWRENCE
+LBN 4 12827 (Save) 19
+Notes Tu 09:00 - 10:50 AM
+EATN 1005C - LAWRENCE
+LBN 4 15181 (Save) 17
+Notes Th 01:00 - 02:50 PM
+EATN 1005C - LAWRENCE
+LBN 4 14821 (Save) 19
+Notes M 03:00 - 04:50 PM
+EATN 1005C - LAWRENCE
+LBN 4 12547 (Save) 18
+Notes W 03:00 - 04:50 PM
+EATN 1005C - LAWRENCE
+LBN 4 15172 (Save) 18
+Notes Tu 04:00 - 05:50 PM
+EATN 1005C - LAWRENCE
+
+---------------------------- Class ends here ----------------------------
