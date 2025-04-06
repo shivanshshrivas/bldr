@@ -1,24 +1,73 @@
 'use client';
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [userId, setUserId] = useState('a123b456');
-    const [password, setPassword] = useState('');
-    const [selectedClasses, setSelectedClasses] = useState([]);
-    const [activeSchedule, setActiveSchedule] = useState(null);
-    const [activeSemester, setActiveSemester] = useState(null);
-    const [activeScheduleName, setActiveScheduleName] = useState(null);
+  // Helper to sync state with localStorage
+  const usePersistedState = (key, initialValue) => {
+    const [state, setState] = useState(() => {
+      if (typeof window !== 'undefined') {
+        const stored = localStorage.getItem(key);
+        return stored ? JSON.parse(stored) : initialValue;
+      }
+      return initialValue;
+    });
 
-    return (
-        <AuthContext.Provider value={{ userId, setUserId, password, setPassword, selectedClasses, setSelectedClasses, activeSchedule, setActiveSchedule, activeSemester, setActiveSemester, activeScheduleName, setActiveScheduleName }}>
-            {children}
-        </AuthContext.Provider>
-    );
-}
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem(key, JSON.stringify(state));
+      }
+    }, [key, state]);
+
+    return [state, setState];
+  };
+
+  const [userId, setUserId] = usePersistedState("userId", "");
+  const [password, setPassword] = useState(""); // don't persist passwords for security
+  const [unofficialTranscript, setUnofficialTranscript] = useState(null);
+  const [catalogYear, setCatalogYear] = useState(null);
+  const [major, setMajor] = useState(null);
+  const [suggestedClasses, setSuggestedClasses] = useState([]);
+  const [selectedClasses, setSelectedClasses] = usePersistedState("selectedClasses", []);
+  const [schedules, setSchedules] = usePersistedState("schedules", []);
+  const [activeSchedule, setActiveSchedule] = usePersistedState("activeSchedule", null);
+  const [activeSemester, setActiveSemester] = usePersistedState("activeSemester", '');
+  const [activeScheduleName, setActiveScheduleName] = usePersistedState("activeScheduleName", '');
+
+  return (
+    <AuthContext.Provider
+      value={{
+        userId,
+        setUserId,
+        password,
+        setPassword,
+        unofficialTranscript,
+        setUnofficialTranscript,
+        catalogYear,
+        setCatalogYear,
+        major,
+        setMajor,
+        suggestedClasses,
+        setSuggestedClasses,
+        selectedClasses,
+        setSelectedClasses,
+        schedules,
+        setSchedules,
+        activeSchedule,
+        setActiveSchedule,
+        activeSemester,
+        setActiveSemester,
+        activeScheduleName,
+        setActiveScheduleName,
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
 export const useAuth = () => {
-    return useContext(AuthContext);
-}
+  return useContext(AuthContext);
+};

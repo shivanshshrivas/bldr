@@ -6,17 +6,7 @@ const TestCal = () => {
   const { activeSchedule, setActiveSchedule } = useAuth();
 
   useEffect(() => {
-    setTimeout(() => {
-      setActiveSchedule([
-        { course: "EECS 361", location: "3151, Learned", days: ["Tuesday", "Thursday"], time: 9.5, duration: 1.25, color: "bg-green-300" },
-        { course: "EECS 443", location: "2300, LEEP2", days: ["Monday", "Wednesday", "Friday"], time: 11, duration: 0.83, color: "bg-orange-300" },
-        { course: "EECS 443 LBN", location: "2002, Eaton", days: ["Wednesday"], time: 15.5, duration: 1.83, color: "bg-orange-300" },
-        { course: "EECS 447", location: "2, Eaton", days: ["Tuesday", "Thursday"], time: 13, duration: 1.25, color: "bg-cyan-300" },
-        { course: "EECS 678", location: "2415, LEEP2", days: ["Monday", "Wednesday", "Friday"], time: 14, duration: 1, color: "bg-purple-300" },
-        { course: "EECS 678 LBN", location: "1005D, Eaton", days: ["Friday"], time: 12, duration: 1.83, color: "bg-purple-300" },
-        { course: "EECS 565", location: "427, Summerfield", days: ["Tuesday", "Thursday"], time: 16, duration: 1, color: "bg-red-300" },
-      ]);
-    }, 1000);
+    
   }, [setActiveSchedule]);
 
   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
@@ -62,9 +52,6 @@ const TestCal = () => {
                             >
                               <div className="font-bold text-[8px] md:text-xs font-dmsans truncate">
                                 {cls.course}
-                              </div>
-                              <div className="text-[7px] md:text-[10px] font-inter truncate">
-                                {cls.location}
                               </div>
                             </div>
                           );
