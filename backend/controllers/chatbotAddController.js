@@ -1,4 +1,3 @@
-// controllers/chatbotAddController.js
 const { pool } = require("../models/pg");
 const Schedule = require("../models/mongoScheduleModel");
 
@@ -10,18 +9,27 @@ const addClassToSchedule = async (req, res) => {
   }
 
   try {
-    // Break classQuery into dept and code (e.g., "EECS 510")
-    const [dept, code] = classQuery.trim().split(" ");
-
-    if (!dept || !code) {
-      return res.status(400).json({ error: "Invalid classQuery format" });
+    // Handle queries like "EECS 678", "EECS 678 LEC", "EECS 678 DIS"
+    const parts = classQuery.trim().split(" ");
+    if (parts.length < 2) {
+      return res.status(400).json({ error: "Invalid classQuery format. Expected 'DEPT CODE [TYPE]'" });
     }
 
-    // Search for matching class in PostgreSQL
-    const result = await pool.query(
-      `SELECT * FROM availclasses WHERE dept = $1 AND code = $2 ORDER BY starttime ASC LIMIT 1`,
-      [dept.toUpperCase(), code]
-    );
+    const dept = parts[0].toUpperCase();
+    const code = parts[1];
+    const type = parts[2] ? parts[2].toUpperCase() : null;
+
+    let query = `SELECT * FROM availclasses WHERE dept = $1 AND code = $2`;
+    const values = [dept, code];
+
+    if (type) {
+      query += ` AND type = $3`;
+      values.push(type);
+    }
+
+    query += ` ORDER BY starttime ASC LIMIT 1`;
+
+    const result = await pool.query(query, values);
 
     if (result.rows.length === 0) {
       return res.status(404).json({ error: `Class ${classQuery} not found` });
@@ -29,14 +37,13 @@ const addClassToSchedule = async (req, res) => {
 
     const classToAdd = result.rows[0];
 
-    // Get user's latest MongoDB schedule
+    // Find latest schedule
     const schedule = await Schedule.findOne({ userID }, {}, { sort: { lastEdited: -1 } });
 
     if (!schedule) {
       return res.status(404).json({ error: "No schedule found to add class to" });
     }
 
-    // Add class
     schedule.classes.push({
       classID: classToAdd.classid,
       type: classToAdd.type,
@@ -54,9 +61,10 @@ const addClassToSchedule = async (req, res) => {
     await schedule.save();
 
     return res.json({
-      message: `✅ Added ${classToAdd.dept} ${classToAdd.code} (${classToAdd.classid}) to your schedule.`,
+      message: `✅ Added ${classToAdd.dept} ${classToAdd.code} ${classToAdd.type} (${classToAdd.classid}) to your schedule.`,
       addedClass: {
         course: `${classToAdd.dept} ${classToAdd.code}`,
+        type: classToAdd.type,
         instructor: classToAdd.instructor,
         time: `${classToAdd.starttime} - ${classToAdd.endtime}`,
         days: classToAdd.days,

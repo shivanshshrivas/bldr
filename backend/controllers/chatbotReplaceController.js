@@ -24,6 +24,7 @@ const replaceClassInSchedule = async (req, res) => {
       cls => cls.dept.toUpperCase() === dept.toUpperCase() && String(cls.code) === String(code)
     );
 
+
     if (existingIndex === -1) {
       return res.status(404).json({ error: `${dept} ${code} not found in your schedule` });
     }

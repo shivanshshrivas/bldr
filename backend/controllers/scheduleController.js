@@ -49,13 +49,17 @@ const updateScheduleClasses = async (req, res) => {
 
 // === Load All Schedules for User ===
 const parseTime = (timeStr) => {
-  const [h, m] = timeStr.replace(/AM|PM/i, "").trim().split(":").map(Number);
+  if (!timeStr || typeof timeStr !== "string") return 0; // default fallback
+  const cleaned = timeStr.replace(/AM|PM/i, "").trim();
+  const [h, m] = cleaned.split(":").map(Number);
   const isPM = timeStr.toUpperCase().includes("PM");
   const hour = isPM && h !== 12 ? h + 12 : !isPM && h === 12 ? 0 : h;
   return hour + (m || 0) / 60;
 };
 
+
 const parseDays = (daysStr) => {
+  if (!daysStr || typeof daysStr !== "string") return [];
   const dayMap = {
     "1": "Monday",
     "2": "Tuesday",
@@ -68,15 +72,28 @@ const parseDays = (daysStr) => {
   return daysStr.split("").map(d => dayMap[d]).filter(Boolean);
 };
 
+
+// Updated transformSchedule function
 const transformSchedule = (classes) => {
-  return classes.map(cls => ({
-    course: `${cls.dept} ${cls.code}` + (cls.type === "LBN" ? " LBN" : ""),
-    location: cls.roomNumber ? `${cls.roomNumber}, ${cls.buildingName}` : "TBD",
-    days: parseDays(cls.days || ""),
-    time: parseTime(cls.startTime),
-    duration: Math.abs(parseTime(cls.endTime) - parseTime(cls.startTime)),
-  }));
+  return classes.map(cls => {
+    const startDecimal = parseTime(cls.startTime);
+    const endDecimal = parseTime(cls.endTime);
+    return {
+      dept: cls.dept || "N/A",
+      code: cls.code || "N/A",
+      className: cls.name || "N/A",
+      days: parseDays(cls.days).join(", ") || "N/A",
+      classID: cls.classID || "N/A",
+      startTime: cls.startTime || "N/A",
+      endTime: cls.endTime || "N/A",
+      instructor: cls.instructorName || "TBD",
+      startTimeInDecimal: startDecimal,
+      duration: Math.abs(endDecimal - startDecimal)
+    };
+  });
 };
+
+
 
 const loadUserSchedules = async (req, res) => {
   const { userID } = req.body;
@@ -89,13 +106,13 @@ const loadUserSchedules = async (req, res) => {
       ...s.toObject(),
       visualSchedule: transformSchedule(s.classes)
     }));
-
     res.json({ schedules: transformed });
   } catch (err) {
     console.error("❌ loadUserSchedules error:", err.message);
     res.status(500).json({ error: "Failed to load schedules" });
   }
 };
+
 
 
 // === Soft Delete a Schedule ===

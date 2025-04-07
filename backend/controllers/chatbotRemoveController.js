@@ -25,8 +25,13 @@ const removeClassFromSchedule = async (req, res) => {
     // Filter out matching classes
     const originalLength = schedule.classes.length;
     schedule.classes = schedule.classes.filter(
-      cls => !(cls.dept.toUpperCase() === dept.toUpperCase() && String(cls.code) === String(code))
+      cls =>
+        !(
+          cls.dept?.toUpperCase() === dept.toUpperCase() &&
+          String(cls.code) === String(code)
+        )
     );
+    
 
     if (schedule.classes.length === originalLength) {
       return res.status(404).json({ error: `Class ${dept} ${code} not found in schedule` });

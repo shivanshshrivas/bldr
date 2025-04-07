@@ -20,23 +20,23 @@ const chatbotMessage = async (req, res) => {
     const context = await getFullContext(userID);
     if (!context) return res.status(404).json({ error: "Context not found for user" });
 
-    const { major, catalogYear, classesTaken, catalogClasses, currentSchedule } = context;
+    const { major, catalogYear, classesTaken, currentSchedule, availableClasses } = context;
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro-preview-03-25" });
 
     const prompt = `
-You are an agentic academic scheduling assistant. Interpret user intent and respond with JSON.
+You are an agentic academic scheduling assistant and advisor. Do not structure the message in any format just give plaintext, and bullet points with end lines Interpret user intent and respond with JSON.
 
 Context:
 - Major: ${major}
 - Catalog Year: ${catalogYear}
 - Taken: ${JSON.stringify(classesTaken)}
-- Required: ${JSON.stringify(catalogClasses)}
 - Current Schedule: ${JSON.stringify(currentSchedule)}
+- Available Classes: ${JSON.stringify(availableClasses)}
 
 User said: "${message}"
 
-Respond with ONE of the following formats:
+Respond with ONE of the following formats and be descriptive with message part of the response:
 
 (1) Passive:
 {

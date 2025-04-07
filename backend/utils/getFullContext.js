@@ -21,12 +21,16 @@ const getFullContext = async (userID) => {
     const allSchedules = await Schedule.find({ userID }).sort({ lastEdited: -1 })
     const currentSchedule = allSchedules.length > 0 ? allSchedules[0].classes : []
 
+    // 5. All available classes
+    const availableRes = await pool.query("SELECT * FROM availclasses")
+    const availableClasses = availableRes.rows
+
     return {
       major,
       catalogYear: catalogyear,
       classesTaken,
-      catalogClasses,
-      currentSchedule
+      currentSchedule,
+      availableClasses
     }
   } catch (err) {
     console.error("❌ getFullContext error:", err.message)
