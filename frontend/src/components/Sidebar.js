@@ -46,7 +46,7 @@ export function Sidebar() {
 
         const data = await response.json();
         console.log("Fetched schedules:", data);
-        setSchedules(data.schedules || []); // assuming API returns { schedules: [...] }
+        setSchedules(data.schedules); // assuming API returns { schedules: [...] }
       } catch (error) {
         console.error("Error loading schedules:", error);
       }
@@ -94,6 +94,7 @@ export function Sidebar() {
   
       const renameData = await renameRes.json();
       console.log("Renamed schedule:", renameData);
+      
     } catch (error) {
       console.error("Error during schedule creation/rename:", error);
     }
@@ -118,6 +119,10 @@ export function Sidebar() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}>
               {/* Placeholder for future icons (e.g. search) */}
+              <svg viewBox="0 0 24 24" height={30} width={30} fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.5 19C15.6421 19 19 15.6421 19 11.5C19 7.35786 15.6421 4 11.5 4C7.35786 4 4 7.35786 4 11.5C4 15.6421 7.35786 19 11.5 19Z" stroke="#fafafa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M20.9999 20.9999L16.6499 16.6499" stroke="#fafafa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+              </svg>
             </motion.div>
           }
         </div>
@@ -180,7 +185,8 @@ export function Sidebar() {
                               onClick={() => {
                                 setActiveScheduleName(schedule.scheduleName);
                                 setActiveSemester(schedule.semester);
-                                setActiveSchedule(schedule.classes);
+                                setActiveSchedule(schedule.visualSchedule);
+                                console.log(activeSchedule);
                               }}
                             >
                               {schedule.scheduleName}

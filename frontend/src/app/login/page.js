@@ -7,7 +7,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
-import { set } from "date-fns";
 
 export default function Login() {
 
@@ -16,29 +15,35 @@ export default function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-    fetch('http://10.104.175.40:5000/api/auth/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            onlineID: userId,
-            password: password
-        })
-
-    }).then((response) => {
-        if (response.ok) {
-            router.push('/builder');
-            setUserId(userId);
-            setPassword(password);
-            console.log(response);
-            
-        } else {
-            throw new Error('Login failed');
+      
+        try {
+          const response = await fetch('http://10.104.175.40:5000/api/auth/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              onlineID: userId,
+              password: password,
+            }),
+          });
+      
+          if (!response.ok) {
+            const errorData = await response.json();
+            console.error("Login failed:", errorData.message || response.statusText);
+            return;
+          }
+      
+          // Only set password if you absolutely must store it temporarily (not recommended)
+          setUserId(userId);
+          setPassword(""); // Optional: Clear password immediately after
+      
+          router.push('/builder');
+        } catch (error) {
+          console.error("Network or server error:", error);
         }
-    });
-
-    }
+      };
+      
 
 
     return (
@@ -62,7 +67,7 @@ export default function Login() {
                         <p className="text-sm font-inter font-medium cursor-pointer">Forgot password?</p>
                         </div>
                         <Input type="password" value = {password} onChange = {(e) => {setPassword(e.target.value)}} id='password' className={`font-inter border-[#404040] border-2`} required />
-                        <Button type="submit"   onClick={handleSubmit} className={`bg-[#fafafa] text-[#1a1a1a] hover:bg-[#404040] hover:text-[#fafafa] cursor-pointer font-dmsans text-md my-3`}>Login</Button>
+                         <Button type="submit"   onClick={handleSubmit} className={`bg-[#fafafa] text-[#1a1a1a] hover:bg-[#404040] hover:text-[#fafafa] cursor-pointer font-dmsans text-md my-3`}>Login</Button>
                     </form>
                     <div className="text-[#a8a8a8] text-xs mt-3 font-inter">Don't have an account with us? <Link href={'/signup'} className="font-medium text-white font-inter">Sign up</Link></div>
                 </div>

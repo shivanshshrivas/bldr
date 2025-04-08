@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
   const [suggestedClasses, setSuggestedClasses] = useState([]);
   const [selectedClasses, setSelectedClasses] = usePersistedState("selectedClasses", []);
   const [schedules, setSchedules] = usePersistedState("schedules", []);
-  const [activeSchedule, setActiveSchedule] = usePersistedState("activeSchedule", null);
+  const [activeSchedule, setActiveSchedule] = usePersistedState("activeSchedule", []);
   const [activeSemester, setActiveSemester] = usePersistedState("activeSemester", '');
   const [activeScheduleName, setActiveScheduleName] = usePersistedState("activeScheduleName", '');
 

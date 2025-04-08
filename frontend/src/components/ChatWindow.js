@@ -1,8 +1,17 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import { motion } from "motion/react"
+import { useAuth } from "@/context/AuthContext";
+
+
+
 
 export default function ChatWindow() {
+
+
+
+    const { userId, setSuggestedClasses } = useAuth();
+
     const [open, setOpen] = useState(true);
     const [messages, setMessages] = useState([
         { text: 'Hello! I am an AI model that can help you make your ideal schedule, add or remove classes based on your preferences, or add blocks to your schedule. Please let know what I can do for you!', sender: 'bot' },
@@ -12,18 +21,46 @@ export default function ChatWindow() {
     const textareaRef = useRef(null);
     const messagesEndRef = useRef(null);
 
-    const sendMessage = () => {
+    const sendMessage = async () => {
         if (!input.trim()) return;
-        setMessages([...messages, { text: input, sender: 'user' }]);
-        setInput('');
+    
+        const userMessage = { text: input, sender: 'user' };
+        setMessages((prev) => [...prev, userMessage]);
         setIsTyping(true);
-
-        // Simulate bot response
-        setTimeout(() => {
-            setMessages((prev) => [...prev, { text: "I'm a bot, here's a response!", sender: 'bot' }]);
+        setInput('');
+    
+        try {
+            const response = await fetch('http://10.104.175.40:5000/api/chatbot/message', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ userID: userId, message: input }),
+            });
+    
+            if (!response.ok) {
+                throw new Error('Failed to send message');
+            }
+    
+            const data = await response.json();
+            console.log("Response data:", data);
+    
+            const botMessage = { text: data.message || "I'm sorry, I didn't understand that.", sender: 'bot' };
+            setMessages((prev) => [...prev, botMessage]);
+        } catch (error) {
+            console.error("Chatbot error:", error);
+            setMessages((prev) => [
+                ...prev,
+                { text: "Something went wrong. Please try again later.", sender: 'bot' },
+            ]);
+        } finally {
             setIsTyping(false);
-        }, 2000);
+            if (response.type == 'active'){
+               setSuggestedClasses(response.schedule);
+            } 
+        }
     };
+    
 
     useEffect(() => {
         if (textareaRef.current) {
@@ -59,7 +96,7 @@ export default function ChatWindow() {
                     initial={{ scale: 0}}
                     transition={{ duration: 0.5 }}
                     animate={{ scale: 1}}
-                    className="text-lg text-white font-figtree">bldr Chat</motion.div>}
+                    className="text-lg text-white font-figtree">Chat</motion.div>}
                 <div></div>
             </div>
 

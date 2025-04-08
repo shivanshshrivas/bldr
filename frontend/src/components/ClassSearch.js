@@ -5,14 +5,15 @@ import { Input } from "./ui/input";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useAuth } from "@/context/AuthContext";
 import Class from "./Class";
-
+import NewClass from "./NewClass";
 export default function ClassSearch() {
     const {
         userId,
         suggestedClasses,
         setSuggestedClasses,
         selectedClasses,
-        setSelectedClasses
+        setSelectedClasses,
+        activeSchedule,
     } = useAuth();
 
     useEffect(() => {
@@ -55,19 +56,12 @@ export default function ClassSearch() {
                 </div>
 
                 <div className="w-full max-w-full mt-4">
-                    <Accordion type="multiple" collapsible className="font-figtree">
+                    <Accordion type="multiple" className="font-figtree">
                         {/* Searched Section */}
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg text-green-400 font-bold">Searched</AccordionTrigger>
                             <AccordionContent className="font-inter">
-                                <Class
-                                    catalogyr="2024"
-                                    classcode="361"
-                                    classname="Signals and Systems Analysis"
-                                    dept="EECS"
-                                    credithours={3}
-                                    major="EE"
-                                />
+                                <div className="text-sm text-[#888888] font-figtree">No classes searched</div>
                             </AccordionContent>
                         </AccordionItem>
 
@@ -80,8 +74,16 @@ export default function ClassSearch() {
                                 ) : (
                                     selectedClasses.map((cls, idx) => (
                                         <Class key={idx} {...cls} />
-                                    ))
+                                    ))                           
+
                                 )}
+                                {
+                                    activeSchedule.length === 0 ? (<div></div>): (
+                                        activeSchedule.map((cls, idx) => (
+                                            <NewClass key={idx} {...cls} />
+                                        ))
+                                    )
+                                }
                             </AccordionContent>
                         </AccordionItem>
 
