@@ -1,29 +1,68 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import { motion } from "motion/react"
+import { useAuth } from "@/context/AuthContext";
+import { set } from 'date-fns';
+
+
+
 
 export default function ChatWindow() {
+
+
+
+    const { userId, setSuggestedClasses } = useAuth();
+
     const [open, setOpen] = useState(true);
     const [messages, setMessages] = useState([
-        { text: 'Hello! I am an AI model that can help you make your ideal schedule, add or remove classes based on your preferences, or add blocks to your schedule. Please let know what I can do for you!', sender: 'bot' },
+        { text: 'Hello! I am Bob the bldr. I can help you make your ideal schedule by adding or removing classes based on your preferences, or adding blocks to your schedule. Please let me know what I can do for you!', sender: 'bot' },
     ]);
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const textareaRef = useRef(null);
     const messagesEndRef = useRef(null);
 
-    const sendMessage = () => {
+    const sendMessage = async () => {
         if (!input.trim()) return;
-        setMessages([...messages, { text: input, sender: 'user' }]);
-        setInput('');
+    
+        const userMessage = { text: input, sender: 'user' };
+        setMessages((prev) => [...prev, userMessage]);
         setIsTyping(true);
-
-        // Simulate bot response
-        setTimeout(() => {
-            setMessages((prev) => [...prev, { text: "I'm a bot, here's a response!", sender: 'bot' }]);
+        setInput('');
+    
+        try {
+            const response = await fetch('http://10.104.175.40:5000/api/chatbot/message', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ userID: userId, message: input }),
+            });
+    
+            if (!response.ok) {
+                setIsTyping(false);
+                throw new Error('Failed to send message');
+            }
+    
+            const data = await response.json();
+            console.log("Response data:", data);
+    
+            const botMessage = { text: data.message || "I'm sorry, I didn't understand that.", sender: 'bot' };
+            setMessages((prev) => [...prev, botMessage]);
+        } catch (error) {
+            console.error("Chatbot error:", error);
+            setMessages((prev) => [
+                ...prev,
+                { text: "Something went wrong. Please try again later.", sender: 'bot' },
+            ]);
+        } finally {
             setIsTyping(false);
-        }, 2000);
+            if (response.type == 'active'){
+               setSuggestedClasses(response.schedule);
+            } 
+        }
     };
+    
 
     useEffect(() => {
         if (textareaRef.current) {
@@ -40,17 +79,17 @@ export default function ChatWindow() {
 
     return (
         <div
-            className={`relative top-0 right-0 h-screen rounded-tl-2xl rounded-bl-2xl transition-all duration-300 overflow-hidden ${open ? 'min-w-[350px] max-w-[350px] bg-[#080808]' : 'min-w-[50px] max-w-[50px] bg-transparent'}`}
+            className={`relative top-0 right-0 h-screen rounded-tl-2xl rounded-bl-2xl transition-all duration-300 overflow-hidden ${open ? 'min-w-[350px] max-w-[350px] bg-[#080808]' : 'min-w-[60px] max-w-[60px] bg-transparent'}`}
         >
-            <div className="absolute top-0 left-0 py-5 px-3 w-full flex justify-between items-center">
+            <div className=" pt-5 w-full flex justify-center items-center">
                 <svg
                     viewBox="0 0 48 48"
                     xmlns="http://www.w3.org/2000/svg"
-                    width={30}
-                    height={30}
+                    width={34}
+                    height={34}
                     fill="#fafafa"
                     stroke="#fafafa"
-                    className={`chat-toggle cursor-pointer transition-all duration-500 ${open ? '' : 'rotate-180'}`}
+                    className={`chat-toggle absolute top-5 left-3 cursor-pointer p-1 rounded-full hover:bg-[#404040] transition-all duration-500 ${open ? '' : 'rotate-180'}`}
                     onClick={() => setOpen(!open)}
                 >
                     <path d="M27.2,24,16.6,34.6a1.9,1.9,0,0,0,.2,3,2.1,2.1,0,0,0,2.7-.2l11.9-12a1.9,1.9,0,0,0,0-2.8l-11.9-12a2.1,2.1,0,0,0-2.7-.2,1.9,1.9,0,0,0-.2,3Z" />
@@ -59,25 +98,29 @@ export default function ChatWindow() {
                     initial={{ scale: 0}}
                     transition={{ duration: 0.5 }}
                     animate={{ scale: 1}}
-                    className="text-lg text-white font-figtree">bldr Chat</motion.div>}
-                <div></div>
+                    exit = {{scale: 0}}
+                    key='chat'
+                    className="text-lg text-white font-figtree">Chat</motion.div>}
             </div>
 
             {open && (
-                <div className="mt-16 px-1 flex flex-col w-full h-[calc(100%-4rem)]">
+                <div className="mt-6 px-1 flex flex-col w-full h-[calc(100%-4rem)]">
                     <div className="flex-1 flex flex-col justify-start overflow-y-auto space-y-2 py-4 pl-1 pr-2">
                         {messages.map((msg, idx) => (
                             <motion.div
                                 initial={{ opacity: 0, y: 20, scale: 0.5 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 key={idx}
-                                className={`max-w-[90%] break-words px-4 py-2 rounded-lg text-white font-inter text-xs ${
+                                className={`max-w-[90%] text-left break-words p-2 rounded-lg text-white font-inter text-xs ${
                                     msg.sender === 'user'
-                                        ? 'bg-[#757FB6] ml-auto text-left '
-                                        : 'bg-[#202020] mr-auto text-left border-[#717171] border'
+                                        ? ' bg-[#757FB6] ml-auto '
+                                        : 'mr-auto '
                                 }`}
                             >
-                                <p className='font-inter text-xs'>{msg.text}</p>
+                                
+
+                                { msg.sender === 'bot' ? (<p className='font-inter text-xs'>{msg.text}</p>)
+                                : (<p className='font-inter text-xs '>{msg.text}</p>)}
                             </motion.div>
                         ))}
 

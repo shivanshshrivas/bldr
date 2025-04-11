@@ -20,6 +20,7 @@ export default function Info() {
   const {
     userId,
     password,
+    setPassword,
     unofficialTranscript,
     setUnofficialTranscript,
     catalogYear,
@@ -47,6 +48,7 @@ export default function Info() {
 
       if (response.ok) {
         router.push("/builder");
+        setPassword(""); // Clear password after successful signup
       } else {
         throw new Error("Signup failed");
       }

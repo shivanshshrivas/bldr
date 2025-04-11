@@ -25,14 +25,14 @@ export const AuthProvider = ({ children }) => {
   };
 
   const [userId, setUserId] = usePersistedState("userId", "");
-  const [password, setPassword] = useState(""); // don't persist passwords for security
+  const [password, setPassword] = usePersistedState("password", ""); 
   const [unofficialTranscript, setUnofficialTranscript] = useState(null);
   const [catalogYear, setCatalogYear] = useState(null);
   const [major, setMajor] = useState(null);
   const [suggestedClasses, setSuggestedClasses] = useState([]);
   const [selectedClasses, setSelectedClasses] = usePersistedState("selectedClasses", []);
   const [schedules, setSchedules] = usePersistedState("schedules", []);
-  const [activeSchedule, setActiveSchedule] = usePersistedState("activeSchedule", null);
+  const [activeSchedule, setActiveSchedule] = usePersistedState("activeSchedule", []);
   const [activeSemester, setActiveSemester] = usePersistedState("activeSemester", '');
   const [activeScheduleName, setActiveScheduleName] = usePersistedState("activeScheduleName", '');
 

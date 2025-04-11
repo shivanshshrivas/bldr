@@ -3,6 +3,12 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -46,7 +52,7 @@ export function Sidebar() {
 
         const data = await response.json();
         console.log("Fetched schedules:", data);
-        setSchedules(data.schedules || []); // assuming API returns { schedules: [...] }
+        setSchedules(data.schedules); // assuming API returns { schedules: [...] }
       } catch (error) {
         console.error("Error loading schedules:", error);
       }
@@ -94,6 +100,7 @@ export function Sidebar() {
   
       const renameData = await renameRes.json();
       console.log("Renamed schedule:", renameData);
+      
     } catch (error) {
       console.error("Error during schedule creation/rename:", error);
     }
@@ -105,8 +112,8 @@ export function Sidebar() {
       {/* Top section: toggle & search */}
       <div>
         <div className='buttons-container flex items-center justify-between mb-5'>
-          <svg viewBox="0 0 24 24" height={30} width={30} fill="none" xmlns="http://www.w3.org/2000/svg"
-            className={`cursor-pointer transition duration-500 ${open ? '' : 'rotate-180'}`}
+          <svg viewBox="0 0 24 24" height={34} width={34} fill="none" xmlns="http://www.w3.org/2000/svg"
+            className={`cursor-pointer p-1 rounded-md transition duration-500 ${open ? '' : 'rotate-180'}`}
             onClick={toggleSidebar}>
             <path d="M21.97 15V9C21.97 4 19.97 2 14.97 2H8.96997C3.96997 2 1.96997 4 1.96997 9V15C1.96997 20 3.96997 22 8.96997 22H14.97C19.97 22 21.97 20 21.97 15Z" stroke="#fafafa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
             <path d="M7.96997 2V22" stroke="#fafafa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
@@ -117,7 +124,20 @@ export function Sidebar() {
             <motion.div className="cursor-pointer transition-all duration-300"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}>
-              {/* Placeholder for future icons (e.g. search) */}
+                <TooltipProvider>
+                  <Tooltip delayDuration={300} >
+                    <TooltipTrigger asChild >
+                      <svg viewBox="0 0 24 24" height={34} width={34} fill="none" xmlns="http://www.w3.org/2000/svg"
+                        className="cursor-pointer hover:bg-[#404040] p-1 rounded-md transition duration-300">
+                        <path d="M11.5 19C15.6421 19 19 15.6421 19 11.5C19 7.35786 15.6421 4 11.5 4C7.35786 4 4 7.35786 4 11.5C4 15.6421 7.35786 19 11.5 19Z" stroke="#fafafa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                        <path d="M20.9999 20.9999L16.6499 16.6499" stroke="#fafafa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                      </svg>
+                    </TooltipTrigger>
+                    <TooltipContent  className="text-xs font-figtree text-[#fafafa]" side='bottom' >
+                      <p>Search schedule</p>
+                    </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </motion.div>
           }
         </div>
@@ -129,7 +149,7 @@ export function Sidebar() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
           >
-            <h1 className="text-2xl font-bold text-[#f8d210] mb-4 font-figtree">Your Schedules</h1>
+            <h1 className="text-2xl font-bold text-gray-300 mb-4 font-figtree">Your Schedules</h1>
 
             <Accordion type="single" collapsible className="font-figtree">
               <AccordionItem value="fall-2025">
@@ -180,7 +200,8 @@ export function Sidebar() {
                               onClick={() => {
                                 setActiveScheduleName(schedule.scheduleName);
                                 setActiveSemester(schedule.semester);
-                                setActiveSchedule(schedule.classes);
+                                setActiveSchedule(schedule.visualSchedule);
+                                console.log(activeSchedule);
                               }}
                             >
                               {schedule.scheduleName}

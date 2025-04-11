@@ -1,20 +1,21 @@
+"use client";
 import React, { useEffect } from "react";
 import { useAuth } from "@/context/AuthContext";
 import { motion } from "framer-motion";
 
 const TestCal = () => {
-  const { activeSchedule, setActiveSchedule } = useAuth();
+  const { activeSchedule, setActiveSchedule, activeScheduleName, setActiveScheduleName } = useAuth();
 
   useEffect(() => {
-    
+    // Optional logic for future
   }, [setActiveSchedule]);
 
   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-  const hours = Array.from({ length: 11 }, (_, i) => 8 + i);
+  const hours = Array.from({ length: 11 }, (_, i) => 8 + i); // 8 AM to 6 PM
 
   return (
     <div className="flex justify-center items-center m-5 bg-[#2c2c2c] flex-1 max-h-[600px] overflow-auto max-w-[600px] border-2 border-[#404040] aspect-square rounded-xl text-white p-2">
-      {activeSchedule ? (
+      {activeScheduleName ? (
         <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="w-full h-full overflow-auto">
           <table className="table-fixed w-full border-collapse">
             <thead>
@@ -38,21 +39,29 @@ const TestCal = () => {
                       <div className="absolute top-[50%] translate-y-[-50%] w-full border-t border-dashed border-[#424242] z-0" />
 
                       {activeSchedule
-                        .filter(cls => cls.days.includes(day) && cls.time >= hour && cls.time < hour + 1)
+                        .filter(cls => {
+                          const classDays = cls.days.split(",").map(d => d.trim());
+                          return (
+                            classDays.includes(day) &&
+                            cls.startTimeInDecimal >= hour &&
+                            cls.startTimeInDecimal < hour + 1
+                          );
+                        })
                         .map((cls, idx) => {
                           const baseRowHeight = window.innerWidth < 500 ? 32 : 44;
-                          const offset = (cls.time - hour) * baseRowHeight;
+                          const offset = (cls.startTimeInDecimal - hour) * baseRowHeight;
                           const height = cls.duration * baseRowHeight;
 
                           return (
                             <div
                               key={idx}
-                              className={`${cls.color} absolute left-0.5 right-0.5 p-0.5 rounded-md text-[#1a1a1a] shadow-md z-10 overflow-hidden`}
+                              className={`${cls.color || 'bg-yellow-300'} absolute flex flex-col items-start left-0.5 right-0.5 p-0.5 rounded-md text-[#1a1a1a] shadow-md z-10 overflow-hidden`}
                               style={{ top: `${offset}px`, height: `${height}px` }}
                             >
                               <div className="font-bold text-[8px] md:text-xs font-dmsans truncate">
-                                {cls.course}
+                                {cls.dept} {cls.code}
                               </div>
+                              <div className="text-[8px] md:text-xs font-figtree truncate">{cls.instructor}</div>
                             </div>
                           );
                         })}
@@ -64,7 +73,7 @@ const TestCal = () => {
           </table>
         </motion.div>
       ) : (
-        <div className="font-inter text-center text-xs md:text-sm">
+        <div className="font-inter m-2 text-center text-xs md:text-sm">
           Create a new schedule or choose one of your previous ones to see it here!
         </div>
       )}
