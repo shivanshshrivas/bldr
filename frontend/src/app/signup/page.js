@@ -6,15 +6,16 @@ import { Label } from "@/components/ui/label"
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/context/AuthContext";
+
 
 export default function Signup() {
 
     const router = useRouter();
-
+    const { userId, setUserId, password, setPassword } = useAuth();
 
     const handleClick = (event) => {
         event.preventDefault();
-
         router.push('/info');
     }
 
@@ -33,10 +34,14 @@ export default function Signup() {
                     </div>
                     <form className="flex flex-col gap-4 w-96">
                         <Label htmlFor="username" className="text-sm font-inter -mb-1">Online ID</Label>
-                        <Input type="text" id="onlineid" placeholder="a123b456" className={`font-inter border-[#404040] border-2`} required />
+                        <Input type="text" id="onlineid" placeholder="a123b456" className={`font-inter border-[#404040] border-2`} required
+                        value = {userId}
+                        onChange = {(e) => {setUserId(e.target.value)} } />
 
                         <Label htmlFor="password" className="text-sm font-inter -mb-1">Password</Label>
-                        <Input type="password" id='password' className={`font-inter border-[#404040] border-2`} required />
+                        <Input type="password" id='password' className={`font-inter border-[#404040] border-2`} required 
+                        value = {password}
+                        onChange = {(e) => {setPassword(e.target.value)}} />
                         
                         <Label htmlFor="confirm-password" className="text-sm font-inter -mb-1">Confirm Password</Label>
                         <Input type="password" id='confirm-password' className={`font-inter border-[#404040] border-2`} required />

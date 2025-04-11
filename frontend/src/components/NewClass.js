@@ -30,7 +30,7 @@ export default function Class(props) {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.2, opacity: 0 }}
                 key={props.classID}
-                className="flex flex-col p-2 rounded-md text-[#fafafa] border-2 border-[#404040] bg-transparent justify-start items-center"
+                className="flex flex-col p-2 my-2 rounded-md text-[#fafafa] border-2 border-[#404040] bg-transparent justify-start items-center"
             >
                 <h1 className="font-dmsans text-lg font-bold self-start">
                     {props.dept} {props.code}: {props.className}

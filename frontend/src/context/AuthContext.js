@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const [userId, setUserId] = usePersistedState("userId", "");
-  const [password, setPassword] = useState(""); // don't persist passwords for security
+  const [password, setPassword] = usePersistedState("password", ""); 
   const [unofficialTranscript, setUnofficialTranscript] = useState(null);
   const [catalogYear, setCatalogYear] = useState(null);
   const [major, setMajor] = useState(null);

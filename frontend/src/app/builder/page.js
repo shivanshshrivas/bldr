@@ -29,9 +29,9 @@ export default function Page() {
         <div className='flex flex-row h-screen w-full items-start'>
             <Sidebar />
             <div className="flex flex-col justify-start items-start w-full ">
-                <div className="page-header sticky top-0 w-full flex flex-1 justify-between items-center">
+                <div className="page-header bg-[#1C1C1C] sticky top-0 w-full flex flex-1 justify-between items-center">
                     <div className="w-full flex-col items-center transition-all duration-300">
-                                                {userId && (
+                        {userId && (
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -47,16 +47,16 @@ export default function Page() {
                                 key={generateRandomString()}
                                 className="text-xl font-figtree px-5 max-w-1/2 whitespace-nowrap overflow-clip overflow-ellipsis text-gray-400" // Medium grey for active schedule
                             >
-                                Active Schedule: {activeScheduleName ?? "Loading Schedule..."}
+                                Active Schedule: {activeScheduleName ? activeScheduleName : "No schedule selected"}
                             </motion.div>
                             <motion.div
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
                                 key={generateRandomString()}
                             >
-                                <Badge className="px-2 h-7 rounded-full outline-2 text-green-400 outline-green-400"> {/* Darker grey for badge */}
-                                    {activeSemester ?? "Semester..."}
-                                </Badge>
+                                {activeSemester && <Badge className="px-2 h-7 rounded-full outline-2 text-green-400 outline-green-400"> {/* Darker grey for badge */}
+                                    {activeSemester}
+                                </Badge>}
                             </motion.div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ export default function Page() {
                     </h1>
                 </div>
                 <div className="flex flex-row flex-1 justify-start items-start gap-2 h-full">
-                    <ClassSearch />
+                    {activeScheduleName && <ClassSearch />}
                     <TestCal />
                 </div>
             </div>

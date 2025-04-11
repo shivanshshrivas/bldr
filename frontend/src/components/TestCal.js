@@ -4,7 +4,7 @@ import { useAuth } from "@/context/AuthContext";
 import { motion } from "framer-motion";
 
 const TestCal = () => {
-  const { activeSchedule, setActiveSchedule } = useAuth();
+  const { activeSchedule, setActiveSchedule, activeScheduleName, setActiveScheduleName } = useAuth();
 
   useEffect(() => {
     // Optional logic for future
@@ -15,7 +15,7 @@ const TestCal = () => {
 
   return (
     <div className="flex justify-center items-center m-5 bg-[#2c2c2c] flex-1 max-h-[600px] overflow-auto max-w-[600px] border-2 border-[#404040] aspect-square rounded-xl text-white p-2">
-      {activeSchedule ? (
+      {activeScheduleName ? (
         <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="w-full h-full overflow-auto">
           <table className="table-fixed w-full border-collapse">
             <thead>
@@ -73,7 +73,7 @@ const TestCal = () => {
           </table>
         </motion.div>
       ) : (
-        <div className="font-inter text-center text-xs md:text-sm">
+        <div className="font-inter m-2 text-center text-xs md:text-sm">
           Create a new schedule or choose one of your previous ones to see it here!
         </div>
       )}
