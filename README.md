@@ -1,6 +1,7 @@
 # bldr
 BLDR: Repository for HackKU 2025 
---Update: We are on track to deliver this app to KU advising and our tool will be used for schedule design by students from Fall 2025.
+
+--Update: We are on track to deliver this produect to University of Kansas' Advisor, and our tool will be used by students for schedule design from Fall 2025.
 ## Inspiration
 
 Our university’s only scheduling tool was taken down right before enrollment opened, leaving us to design our semester class schedule on our own, trying out different combinations of class time to fit our classes into schedule. This left us scrambling with spreadsheets and papers. We knew there had to be a better way—so we built **bldr**.
