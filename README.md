@@ -1,5 +1,6 @@
 # bldr
 BLDR: Repository for HackKU 2025 
+--Update: We are on track to deliver this app to KU advising and our tool will be used for schedule design by students from Fall 2025.
 ## Inspiration
 
 Our university’s only scheduling tool was taken down right before enrollment opened, leaving us to design our semester class schedule on our own, trying out different combinations of class time to fit our classes into schedule. This left us scrambling with spreadsheets and papers. We knew there had to be a better way—so we built **bldr**.
@@ -105,36 +106,5 @@ Our university’s only scheduling tool was taken down right before enrollment o
 
 ---
 
-## Accomplishments
 
-- Built a fully agentic chatbot that not only suggests but actually assembles and modifies your schedule.  
-- Achieved real-time scraping and conflict detection fused with historical transcript data.  
-- Seamless Google Calendar sync and instant email sharing.
-
-## What We Learned
-
-- Small UX touches (micro-animations, clear prompts) dramatically improve usability.  
-- Hybrid relational + document databases can coexist when each serves a targeted purpose.  
-- Effective LLM integration hinges on clear context management and intent tagging.  
-- Real-time user feedback accelerates feature prioritization and bug fixes.
-
-## What’s Next for bldr
-
-- Enhance recommendations with personal metrics: workload, commute time, extracurriculars.  
-- Add collaborative features so friends can swap and compare schedules.  
-- Expand the chatbot’s academic advice capabilities (e.g., degree planning over multiple years).
-
----
-
-## Built With
-
-- **Next.js**  
-- **Tailwind CSS** & **Shadcn UI**  
-- **Framer Motion**  
-- **Express.js** & **Node.js**  
-- **PostgreSQL**  
-- **MongoDB Atlas**  
-- **Selenium** & **BeautifulSoup**  
-- **Google Gemini API**  
-- **Google Calendar API**  
-- **SendGrid** (or equivalent)  
+ 
