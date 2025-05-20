@@ -24,11 +24,15 @@ export const AuthProvider = ({ children }) => {
     return [state, setState];
   };
 
+
+  //form data
   const [userId, setUserId] = usePersistedState("userId", "");
   const [password, setPassword] = usePersistedState("password", ""); 
   const [unofficialTranscript, setUnofficialTranscript] = useState(null);
   const [catalogYear, setCatalogYear] = useState(null);
   const [major, setMajor] = useState(null);
+
+  
   const [suggestedClasses, setSuggestedClasses] = useState([]);
   const [selectedClasses, setSelectedClasses] = usePersistedState("selectedClasses", []);
   const [schedules, setSchedules] = usePersistedState("schedules", []);
