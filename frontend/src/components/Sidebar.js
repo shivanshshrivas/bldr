@@ -170,10 +170,11 @@ export function Sidebar() {
                       type="button"
                       onClick={() => {
                         if (newScheduleName.trim()) {
+                          handleScheduleClick(newScheduleName.trim());
                           setSchedules((prev) => [...prev, newScheduleName.trim()]);
                           setNewScheduleName("");
                         }
-                        handleScheduleClick(newScheduleName.trim());
+                        
                       }}
                       className="bg-[#fafafa] text-xs text-[#1a1a1a] hover:bg-[#404040] hover:text-[#fafafa] cursor-pointer font-dmsans text-md"
                     >
