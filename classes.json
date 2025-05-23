@@ -1,120 +1,30 @@
 [
   {
-    "class_code": "EECS  443",
-    "title": "Elect Engr & Computer Science - Digital Systems Design",
-    "credit_hours": 4,
-    "term": "Spring 2025",
-    "description": "The design of digital systems from a hardware point of view. The implementation of functional and control units using programmable logic devices. Introduction to VHDL and its use in modeling and designing digital systems.  Prerequisite:  EECS 388.",
+    "class_code": "EECS  643",
+    "title": "Elect Engr & Computer Science - Computer Architecture",
+    "credit_hours": 3,
+    "term": "Fall 2025",
+    "description": "The structure and design of computing systems. Examination and analysis of computing systems. Examination and analysis of instruction set architectures, pipelined control and arithmetic units, vector processors, memory hierarchies, and performance evaluation.  Prerequisite:  EECS 443.",
     "prerequisites": [
-      "  EECS 388"
+      "  EECS 443"
     ],
     "corequisites": [],
     "sections": [
       {
         "type": "LEC",
         "instructor": "Aly, Esam Eldin",
-        "credit_hours": 4,
-        "class_number": "40630",
-        "seats_available": "15",
+        "credit_hours": 3,
+        "class_number": "20182",
+        "seats_available": "33",
         "days": [
           "Monday",
           "Wednesday",
           "Friday"
         ],
-        "start_time": "11:00 AM",
-        "end_time": "11:50 AM",
+        "start_time": "12:00 PM",
+        "end_time": "12:50 PM",
         "building": "LEEP2",
         "room": "2300",
-        "campus": "- LAWRENCE"
-      },
-      {
-        "type": "LBN",
-        "instructor": "Chaudhary, Manu",
-        "credit_hours": 4,
-        "class_number": "40632",
-        "seats_available": "3",
-        "days": [
-          "Monday"
-        ],
-        "start_time": "09:00 AM",
-        "end_time": "10:50 AM",
-        "building": "EATN",
-        "room": "2002",
-        "campus": "- LAWRENCE"
-      },
-      {
-        "type": "LBN",
-        "instructor": "Chaudhary, Manu",
-        "credit_hours": 4,
-        "class_number": "43091",
-        "seats_available": "6",
-        "days": [
-          "Wednesday"
-        ],
-        "start_time": "09:00 AM",
-        "end_time": "10:50 AM",
-        "building": "EATN",
-        "room": "2002",
-        "campus": "- LAWRENCE"
-      },
-      {
-        "type": "LBN",
-        "instructor": "Nobel, Md. Alvir Islam",
-        "credit_hours": 4,
-        "class_number": "40631",
-        "seats_available": "Full",
-        "days": [
-          "Monday"
-        ],
-        "start_time": "03:00 PM",
-        "end_time": "04:50 PM",
-        "building": "EATN",
-        "room": "2002",
-        "campus": "- LAWRENCE"
-      },
-      {
-        "type": "LBN",
-        "instructor": "Nobel, Md. Alvir Islam",
-        "credit_hours": 4,
-        "class_number": "40633",
-        "seats_available": "Full",
-        "days": [
-          "Wednesday"
-        ],
-        "start_time": "03:00 PM",
-        "end_time": "04:50 PM",
-        "building": "EATN",
-        "room": "2002",
-        "campus": "- LAWRENCE"
-      },
-      {
-        "type": "LBN",
-        "instructor": "Eltom, Abdalla",
-        "credit_hours": 4,
-        "class_number": "57594",
-        "seats_available": "11",
-        "days": [
-          "Friday"
-        ],
-        "start_time": "09:00 AM",
-        "end_time": "10:50 AM",
-        "building": "EATN",
-        "room": "2002",
-        "campus": "- LAWRENCE"
-      },
-      {
-        "type": "LBN",
-        "instructor": "Eltom, Abdalla",
-        "credit_hours": 4,
-        "class_number": "57593",
-        "seats_available": "Full",
-        "days": [
-          "Friday"
-        ],
-        "start_time": "03:00 PM",
-        "end_time": "04:50 PM",
-        "building": "EATN",
-        "room": "2002",
         "campus": "- LAWRENCE"
       }
     ]

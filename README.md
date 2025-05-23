@@ -49,7 +49,7 @@ Our university’s only scheduling tool was taken down right before enrollment o
 ### Parsing & Automation
 
 - **Selenium** & **BeautifulSoup** scrape live course listings  
-- Custom parsers normalize disparate HTML structures into clean JSON  
+- Custom parsers normalize disparate HTML structures into clean JSON using input of your class and semester selection 
 
 ### LLM Integration
 
@@ -63,12 +63,6 @@ Our university’s only scheduling tool was taken down right before enrollment o
 - **Google Calendar API** for one-click schedule export  
 - **SendGrid** (or similar) for instant email sharing  
 
----
-
-## Architecture & Flowchart
-
-![bldr Flowchart](docs/flowchart.png)  
-*High-level overview of data flow between frontend, backend, scraper, databases, and Gemini API.*
 
 ---
 

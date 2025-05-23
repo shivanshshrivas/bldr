@@ -163,5 +163,5 @@ def scrape_ku_classes(subject: str,
     print(f"Saved {len(courses)} courses to {output_file}")
 
 if __name__ == "__main__":
-    scrape_ku_classes("EECS 643", term_value="4259", mode="P")
+    scrape_ku_classes("EECS 643", term_value="4259")
 
