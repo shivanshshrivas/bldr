@@ -41,7 +41,7 @@ def parse_schedule(raw: str):
     return days, parts[0].strip(), parts[1].strip() if len(parts) > 1 else ""
 
 def scrape_ku_classes(subject: str,
-                      career: str = "Undergraduate",
+                      career: str = "UndergraduateGraduate",
                       term_value: str = "4259",
                       mode: str = "", 
                       output_file: str = "classes.json"):
@@ -163,5 +163,5 @@ def scrape_ku_classes(subject: str,
     print(f"Saved {len(courses)} courses to {output_file}")
 
 if __name__ == "__main__":
-    scrape_ku_classes("EECS 443", career="UGDL", term_value="4252", mode="P")
+    scrape_ku_classes("EECS 643", term_value="4259", mode="P")
 
