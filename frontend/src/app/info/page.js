@@ -21,8 +21,8 @@ export default function Info() {
     userId,
     password,
     setPassword,
-    unofficialTranscript,
-    setUnofficialTranscript,
+    // unofficialTranscript,
+    // setUnofficialTranscript,
     catalogYear,
     setCatalogYear,
     major,
@@ -38,7 +38,7 @@ export default function Info() {
       formData.append("password", password);
       formData.append("major", major);
       formData.append("catalogYear", catalogYear);
-      formData.append("transcript", unofficialTranscript);
+      // formData.append("transcript", unofficialTranscript);
 
 
       const response = await fetch("http://10.104.175.40:5000/api/auth/signup", {
@@ -72,7 +72,7 @@ export default function Info() {
             </h2>
           </div>
           <form className="flex flex-col gap-4 w-96" onSubmit={handleSubmit}>
-            <Label htmlFor="transcript" className="text-sm font-inter -mb-1">
+            {/* <Label htmlFor="transcript" className="text-sm font-inter -mb-1">
               Unofficial Transcript
             </Label>
             <Input
@@ -81,7 +81,7 @@ export default function Info() {
               onChange={(e) => setUnofficialTranscript(e.target.files?.[0] || null)}
               className="font-figtree cursor-pointer [&::file-selector-button]:text-[#a8a8a8] border-[#404040] bg-[#1a1a1a] text-[#fafafa]"
               required
-            />
+            /> */}
 
             <Label htmlFor="major" className="text-sm font-inter -mb-1">
               Major

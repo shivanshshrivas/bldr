@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
   //form data
   const [userId, setUserId] = usePersistedState("userId", "");
   const [password, setPassword] = usePersistedState("password", ""); 
-  const [unofficialTranscript, setUnofficialTranscript] = useState(null);
+  // const [unofficialTranscript, setUnofficialTranscript] = useState(null);
   const [catalogYear, setCatalogYear] = useState(null);
   const [major, setMajor] = useState(null);
 
@@ -47,8 +47,8 @@ export const AuthProvider = ({ children }) => {
         setUserId,
         password,
         setPassword,
-        unofficialTranscript,
-        setUnofficialTranscript,
+        // unofficialTranscript,
+        // setUnofficialTranscript,
         catalogYear,
         setCatalogYear,
         major,
