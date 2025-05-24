@@ -1,10 +1,10 @@
 # bldr
 BLDR: Repository for HackKU 2025 
 
---Update: We are on track to deliver this produect to University of Kansas' Advisor, and our tool will be used by students for schedule design from Fall 2025.
+**Update**: We are on track to deliver this produect to University of Kansas' Advisor, and our tool will be used by students for schedule design from Fall 2025.
 ## Inspiration
 
-Our university’s only scheduling tool was taken down right before enrollment opened, leaving us to design our semester class schedule on our own, trying out different combinations of class time to fit our classes into schedule. This left us scrambling with spreadsheets and papers. We knew there had to be a better way—so we built **bldr**.
+Our university’s only class scheduling tool was taken down right before fall and summer enrollment opened, leaving us to design our semester class schedule on our own, trying out different combinations of class time to fit our classes into schedule. This left us making our schedules on spreadsheets and papers. We knew there had to be a better way and we came across the idea of **bldr**.
 
 ## What It Does
 
@@ -63,9 +63,6 @@ Our university’s only scheduling tool was taken down right before enrollment o
 - **Google Calendar API** for one-click schedule export  
 - **SendGrid** (or similar) for instant email sharing  
 
-
----
-
 ## Challenges We Ran Into
 
 - **Web Scraping**  
@@ -77,7 +74,7 @@ Our university’s only scheduling tool was taken down right before enrollment o
 - **Agentic Features**  
   Enabling Gemini to actually call our APIs and update MongoDB documents on the fly was a complex orchestration.
 
----
+
 
 ## Deep Dives
 
@@ -99,7 +96,7 @@ Our university’s only scheduling tool was taken down right before enrollment o
 - **Agentic Behavior**  
   On “active” intents, Gemini triggers our backend endpoints automatically, then confirms changes to the user.
 
----
+
 
 
  
