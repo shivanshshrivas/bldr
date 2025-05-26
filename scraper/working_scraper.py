@@ -31,6 +31,7 @@ def parse_schedule(raw: str):
                 days.append(full)
                 i += len(abbr)
                 break
+                
         else:
             i += 1
     tm = re.match(r"(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})\s*([AP]M)$", time_part)
@@ -92,10 +93,8 @@ def scrape_ku_classes(subject: str,
             continue
         desc_td = desc_tr.find("td")
         hdr = header_tr.td.get_text(" ", strip=True)
-        m = re.match(
-            r"^([A-Z]{3,4}\s*\d{3})\s+(.*?)\s*\(\s*(\d+)\s*\)\s*(Fall|Spring|Summer)\s*(\d{4})",
-            hdr
-        )
+        m = re.match(r"^([A-Z]{3,4}\s*\d{1,4})\s+(.*?)\s*\(\s*([\d\-]+)\s*\)\s*(Fall|Spring|Summer)\s*(\d{4})", hdr)
+        # Match class code, title, credit hours, term, and year
         if not m:
             continue
         code, title, cred, term, year = m.groups()
@@ -150,7 +149,7 @@ def scrape_ku_classes(subject: str,
         courses.append({
             "class_code": code,
             "title": title,
-            "credit_hours": int(cred),
+            "credit_hours": [int(x) for x in cred.split("-")] if "-" in cred else int(cred),
             "term": f"{term} {year}",
             "description": desc_text,
             "prerequisites": prereq.group(1).split(",") if prereq else [],
@@ -163,5 +162,5 @@ def scrape_ku_classes(subject: str,
     print(f"Saved {len(courses)} courses to {output_file}")
 
 if __name__ == "__main__":
-    scrape_ku_classes("EECS 643", term_value="4259")
+    scrape_ku_classes(" EECS 210 MATH 127")
 
