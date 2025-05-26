@@ -31,7 +31,7 @@ export function Sidebar() {
     setActiveSchedule,
   } = useAuth();
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [newScheduleName, setNewScheduleName] = useState("");
 
   const toggleSidebar = () => {
@@ -108,7 +108,7 @@ export function Sidebar() {
   
 
   return (
-    <div className={`sidebar mr-2 flex flex-col justify-between rounded-tr-2xl rounded-br-2xl relative top-0 left-0 h-screen transition-all duration-300 ${open ? 'min-w-[250px] max-w-[250px] bg-[#080808]' : 'bg-transparent min-w-[80px] max-w-[80px]'} overflow-hidden p-5`}>
+    <div className={`sidebar mr-2 flex flex-col justify-between rounded-tr-2xl rounded-br-2xl relative top-0 left-0 h-screen transition-all duration-300 ${open ? 'min-w-[350px] max-w-[350px] bg-[#080808]' : 'bg-transparent min-w-[80px] max-w-[80px]'} overflow-hidden p-5`}>
       {/* Top section: toggle & search */}
       <div>
         <div className='buttons-container flex items-center justify-between mb-5'>
@@ -151,9 +151,9 @@ export function Sidebar() {
           >
             <h1 className="text-2xl font-bold text-gray-300 mb-4 font-figtree">Your Schedules</h1>
 
-            <Accordion type="single" collapsible className="font-figtree">
+            <Accordion type="single" collapsible defaultValue = 'fall-2025' className="font-figtree">
               <AccordionItem value="fall-2025">
-                <AccordionTrigger className="text-lg text-green-400 font-bold">Fall 2025</AccordionTrigger>
+                <AccordionTrigger className="text-lg  text-green-400 hover:scale-105 hover:no-underline hover:cursor-pointer font-bold">Fall 2025</AccordionTrigger>
                 <AccordionContent className="font-inter">
                   {/* New schedule input */}
                   <Label htmlFor="schedule-name" className="text-sm font-dmsans mb-1 text-[#888888]">Make new schedule</Label>
@@ -170,10 +170,11 @@ export function Sidebar() {
                       type="button"
                       onClick={() => {
                         if (newScheduleName.trim()) {
+                          handleScheduleClick(newScheduleName.trim());
                           setSchedules((prev) => [...prev, newScheduleName.trim()]);
                           setNewScheduleName("");
                         }
-                        handleScheduleClick(newScheduleName.trim());
+                        
                       }}
                       className="bg-[#fafafa] text-xs text-[#1a1a1a] hover:bg-[#404040] hover:text-[#fafafa] cursor-pointer font-dmsans text-md"
                     >
@@ -213,39 +214,7 @@ export function Sidebar() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="spring-2025">
-                <AccordionTrigger className="text-lg text-purple-400 font-bold">Spring 2025</AccordionTrigger>
-                <AccordionContent>
-                  {/* Schedule list */}
-                  <ul className="list-none pl-2">
-                    {schedules.length === 0 ? (
-                      <p className="text-sm text-gray-400">No schedules found.</p>
-                    ) : (
-                        schedules
-                        .filter((schedule) => schedule.semester === 'Spring 2025')
-                        .map((schedule, index) => (
-                          <li
-                            key={index}
-                            className={`text-sm text-[#fafafa] font-inter my-2 hover:bg-[#333] rounded-md transition duration-75 ${
-                              activeScheduleName === schedule.scheduleName ? 'bg-[#333]' : ''
-                            }`}
-                          >
-                            <button
-                              className="p-2 cursor-pointer w-full text-left"
-                              onClick={() => {
-                                setActiveScheduleName(schedule.scheduleName);
-                                setActiveSemester(schedule.semester);
-                                setActiveSchedule(schedule.classes);
-                              }}
-                            >
-                              {schedule.scheduleName}
-                            </button>
-                          </li>
-                      ))
-                    )}
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
+             
             </Accordion>
           </motion.div>
         )}
