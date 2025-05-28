@@ -72,7 +72,6 @@ export default function Page() {
                     <TestCal />
                 </div>
             </div>
-            <ChatWindow />
         </div>
     );
 }

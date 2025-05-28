@@ -10,40 +10,11 @@ import NewClass from "./NewClass";
 export default function ClassSearch() {
     const {
         userId,
-        suggestedClasses,
-        setSuggestedClasses,
         selectedClasses,
         setSelectedClasses,
         activeSchedule,
     } = useAuth();
-
-    useEffect(() => {
-        const fetchSuggestedClasses = async () => {
-            try {
-                const response = await fetch('http://10.104.175.40:5000/api/suggest', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ userID: userId }),
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to fetch suggested classes');
-                }
-
-                const data = await response.json();
-                console.log("Suggested classes:", data);
-                setSuggestedClasses(data.suggestedClasses || []);
-            } catch (error) {
-                console.error("Error fetching suggested classes:", error);
-            }
-        };
-
-        if (userId) {
-            fetchSuggestedClasses();
-        }
-    }, [userId]);
+;
 
     return (
         <div className="flex flex-col justify-start items-center my-5 min-w-[420px] max-w-[500px] max-h-[600px] overflow-y-scroll bg-[#080808] transition-all duration-150 border-2 border-[#303030] rounded-2xl">
@@ -96,20 +67,6 @@ export default function ClassSearch() {
                                         ))
                                     )
                                 }
-                            </AccordionContent>
-                        </AccordionItem>
-
-                        {/* Suggested Section */}
-                        <AccordionItem value="item-3">
-                            <AccordionTrigger className="text-lg text-blue-400 font-bold">Suggested</AccordionTrigger>
-                            <AccordionContent>
-                                {suggestedClasses.length === 0 ? (
-                                    <div className="text-sm text-[#888888] font-figtree">No suggested classes available</div>
-                                ) : (
-                                    suggestedClasses.map((classData, index) => (
-                                        <Class key={index} {...classData} />
-                                    ))
-                                )}
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
