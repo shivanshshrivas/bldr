@@ -50,10 +50,10 @@ export default function Class(props) {
             {classInfo && classInfo.data.length > 0 ?
             <motion.div
             initial={{ scale: 0.6, opacity: 0}}
-            animate={{ scale: 1, opacity: 1}}
+            animate={{ scale: 1, opacity: 1, transition: { delay: 0.3 }}}
             exit={{ scale: 0.6, opacity: 0 }}
             key={props.uuid}
-            className="flex flex-col p-2 my-2 rounded-md text-[#fafafa] border-2 max-w-[420px] border-[#404040] bg-transparent justify-start items-center"
+            className="flex flex-col p-2 mt-2 mb-6 rounded-md text-[#fafafa] border-2 max-w-[420px] border-[#404040] shadow-md justify-start items-center"
             >
                 <h1 className="font-dmsans text-lg font-bold self-start mb-1">
                     {classInfo.data[0].dept} {classInfo.data[0].code}: {classInfo.data[0].title}
@@ -75,7 +75,7 @@ export default function Class(props) {
                         <div className="flex flex-row gap-4 items-start">
                             <span className="font-semibold">#{section.classID}</span>
                             <div className="flex flex-col justify-start items-start font-inter">
-                                <span className="text-sm text-[#fafafa]">{section.days} {section.starttime} - {section.endtime}</span>
+                                <span className="text-sm text-[#fafafa]">{section.days} {section.starttime} - {section.endtime} {section.component}</span>
                                 {section.instructor && (
                                     <span className="text-xs text-[#a8a8a8]">{section.instructor}</span>
                                 )}
@@ -87,10 +87,15 @@ export default function Class(props) {
                 </button>
                 ))}
             </motion.div>
-            : 
-            <div className="flex w-full justify-center items-center bg">
+            :
+             
+            <motion.div className="flex w-full justify-center items-center mb-6 "
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}>
                 <Loader />
-            </div>}
+                <p className="mx-2 text-xs font-inter text-[#b0b0b0]">Loading details for {props.dept} {props.classcode}...</p>
+            </motion.div>}
         </AnimatePresence>
     );
 }

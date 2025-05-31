@@ -143,12 +143,8 @@ export default function ClassSearch() {
                                             
                                             key={c.uuid}
                                             uuid={c.uuid}
-                                            days={c.days}
-                                            credithours={c.credithours}
                                             classcode={c.code}
-                                            classname={c.title}
                                             dept={c.dept}
-                                            instructor={c.instructor}
                                         />
                                     ))
                                 )}
