@@ -25,6 +25,12 @@ export default function TestingPage() {
   const [term, setTerm] = useState('4259');
   const [classResp, setClassResp] = useState('');
 
+  /* ---------- addClass tester state ---------- */
+  const [scheduleidAddClass, setScheduleidAddClass] = useState('');
+  const [classidAddClass, setClassidAddClass] = useState('');
+  const [uuidAddClass, setUuidAddClass] = useState('');
+  const [addClassResp, setAddClassResp] = useState('');
+
   /* ---------- live-class search debounce ---------- */
   useEffect(() => {
     const delay = setTimeout(() => {
@@ -221,6 +227,44 @@ export default function TestingPage() {
         </button>
         <pre className="bg-gray-100 p-3 rounded text-sm whitespace-pre-wrap break-words max-h-96 overflow-y-auto">
           {classResp}
+        </pre>
+      </section>
+
+      {/* ---------- addClass tester ---------- */}
+      <section className="space-y-2">
+        <h2 className="font-semibold text-lg">➕ Add Class to Schedule</h2>
+        <input
+          className="border p-2 w-full"
+          placeholder="Schedule ID"
+          value={scheduleidAddClass}
+          onChange={(e) => setScheduleidAddClass(e.target.value)}
+        />
+        <input
+          className="border p-2 w-full"
+          placeholder="Class ID"
+          value={classidAddClass}
+          onChange={(e) => setClassidAddClass(e.target.value)}
+        />
+        <input
+          className="border p-2 w-full"
+          placeholder="UUID"
+          value={uuidAddClass}
+          onChange={(e) => setUuidAddClass(e.target.value)}
+        />
+        <button
+          className="bg-green-600 text-white px-4 py-2 rounded"
+          onClick={() =>
+            callAPI(
+              'addClass',
+              { scheduleid: scheduleidAddClass, classid: classidAddClass, uuid: uuidAddClass },
+              setAddClassResp
+            )
+          }
+        >
+          Add Class
+        </button>
+        <pre className="bg-gray-100 p-3 rounded text-sm whitespace-pre-wrap break-words max-h-96 overflow-y-auto">
+          {addClassResp}
         </pre>
       </section>
     </div>
