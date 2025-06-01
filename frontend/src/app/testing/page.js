@@ -30,6 +30,20 @@ export default function TestingPage() {
   const [term, setTerm] = useState('4259');
   const [classResp, setClassResp] = useState('');
 
+  /* ---------- addClass tester state ---------- */
+  const [scheduleidAddClass, setScheduleidAddClass] = useState('');
+  const [classidAddClass, setClassidAddClass] = useState('');
+  const [uuidAddClass, setUuidAddClass] = useState('');
+  const [addClassResp, setAddClassResp] = useState('');
+
+  /* ---------- updateClass tester state ---------- */
+  const [updateScheduleid, setUpdateScheduleid] = useState('');
+  const [oldClassid, setOldClassid] = useState('');
+  const [newClassid, setNewClassid] = useState('');
+  const [oldUuid, setOldUuid] = useState('');
+  const [newUuid, setNewUuid] = useState('');
+  const [updateClassResp, setUpdateClassResp] = useState('');
+
   /* ---------- live-class search debounce ---------- */
   useEffect(() => {
     const delay = setTimeout(() => {
@@ -228,41 +242,133 @@ export default function TestingPage() {
           {classResp}
         </pre>
       </section>
-      <hr />
 
-{/* ---------- remove class from schedule ---------- */}
-<section className="space-y-2">
-<input
-  className="border p-2 w-full"
-  placeholder="Schedule ID (uuid)"
-  value={removeScheduleID}
-  onChange={(e) => setRemoveScheduleID(e.target.value)}
-/>
-<input
-  className="border p-2 w-full"
-  placeholder="Class UUID (from allclasses)"
-  value={removeClassUUID}
-  onChange={(e) => setRemoveClassUUID(e.target.value)}
-/>
-<button
-  className="bg-red-600 text-white px-4 py-2 rounded"
-  onClick={() =>
-    callAPI(
-      'removeClass',
-      {
-        scheduleid: removeScheduleID,
-        uuid: removeClassUUID,
-      },
-      setRemoveResp
-    )
-  }
->
-  Remove Class
-</button>
-<pre className="bg-gray-100 p-3 rounded text-sm">{removeResp}</pre>
+      {/* ---------- addClass tester ---------- */}
+      <section className="space-y-2">
+        <h2 className="font-semibold text-lg">➕ Add Class to Schedule</h2>
+        <input
+          className="border p-2 w-full"
+          placeholder="Schedule ID"
+          value={scheduleidAddClass}
+          onChange={(e) => setScheduleidAddClass(e.target.value)}
+        />
+        <input
+          className="border p-2 w-full"
+          placeholder="Class ID"
+          value={classidAddClass}
+          onChange={(e) => setClassidAddClass(e.target.value)}
+        />
+        <input
+          className="border p-2 w-full"
+          placeholder="UUID"
+          value={uuidAddClass}
+          onChange={(e) => setUuidAddClass(e.target.value)}
+        />
+        <button
+          className="bg-green-600 text-white px-4 py-2 rounded"
+          onClick={() =>
+            callAPI(
+              'addClass',
+              { scheduleid: scheduleidAddClass, classid: classidAddClass, uuid: uuidAddClass },
+              setAddClassResp
+            )
+          }
+        >
+          Add Class
+        </button>
+        <pre className="bg-gray-100 p-3 rounded text-sm whitespace-pre-wrap break-words max-h-96 overflow-y-auto">
+          {addClassResp}
+        </pre>
+      </section>
 
+      {/* ---------- remove class from schedule ---------- */}
+      <section className="space-y-2">
+        <h2 className="font-semibold text-lg">➖ Remove Class from Schedule</h2>
+      <input
+        className="border p-2 w-full"
+        placeholder="Schedule ID (uuid)"
+        value={removeScheduleID}
+        onChange={(e) => setRemoveScheduleID(e.target.value)}
+      />
+      <input
+        className="border p-2 w-full"
+        placeholder="Class UUID (from allclasses)"
+        value={removeClassUUID}
+        onChange={(e) => setRemoveClassUUID(e.target.value)}
+      />
+      <button
+        className="bg-red-600 text-white px-4 py-2 rounded"
+        onClick={() =>
+          callAPI(
+            'removeClass',
+            {
+              scheduleid: removeScheduleID,
+              uuid: removeClassUUID,
+            },
+            setRemoveResp
+          )
+        }
+      >
+        Remove Class
+      </button>
+      <pre className="bg-gray-100 p-3 rounded text-sm">{removeResp}</pre>
+      </section>
 
-</section>
+      {/* ---------- updateClass tester ---------- */}
+      <section className="space-y-2">
+        <h2 className="font-semibold text-lg">✏️ Update Class in Schedule</h2>
+        <input
+          className="border p-2 w-full"
+          placeholder="Schedule ID"
+          value={updateScheduleid}
+          onChange={(e) => setUpdateScheduleid(e.target.value)}
+        />
+        <input
+          className="border p-2 w-full"
+          placeholder="Old Class ID"
+          value={oldClassid}
+          onChange={(e) => setOldClassid(e.target.value)}
+        />
+        <input
+          className="border p-2 w-full"
+          placeholder="New Class ID"
+          value={newClassid}
+          onChange={(e) => setNewClassid(e.target.value)}
+        />
+        <input
+          className="border p-2 w-full"
+          placeholder="Old UUID"
+          value={oldUuid}
+          onChange={(e) => setOldUuid(e.target.value)}
+        />
+        <input
+          className="border p-2 w-full"
+          placeholder="New UUID"
+          value={newUuid}
+          onChange={(e) => setNewUuid(e.target.value)}
+        />
+        <button
+          className="bg-blue-600 text-white px-4 py-2 rounded"
+          onClick={() =>
+            callAPI(
+              'updateClass',
+              {
+                scheduleid: updateScheduleid,
+                oldClassid,
+                newClassid,
+                oldUuid,
+                newUuid,
+              },
+              setUpdateClassResp
+            )
+          }
+        >
+          Update Class
+        </button>
+        <pre className="bg-gray-100 p-3 rounded text-sm whitespace-pre-wrap break-words max-h-96 overflow-y-auto">
+          {updateClassResp}
+        </pre>
+      </section>
     </div>
   );
 }
