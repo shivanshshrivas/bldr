@@ -11,6 +11,11 @@ export default function TestingPage() {
   const [search, setSearch] = useState('');
   const [classResults, setClassResults] = useState([]);
 
+    /* ---------- remove class state---------- */
+  const [removeScheduleID, setRemoveScheduleID] = useState('');
+  const [removeClassUUID, setRemoveClassUUID] = useState('');
+  const [removeResp, setRemoveResp] = useState('');
+
   /* ---------- schedule-creation state ---------- */
   const [schedName, setSchedName] = useState('');
   const [semester, setSemester] = useState('');
@@ -223,6 +228,41 @@ export default function TestingPage() {
           {classResp}
         </pre>
       </section>
+      <hr />
+
+{/* ---------- remove class from schedule ---------- */}
+<section className="space-y-2">
+<input
+  className="border p-2 w-full"
+  placeholder="Schedule ID (uuid)"
+  value={removeScheduleID}
+  onChange={(e) => setRemoveScheduleID(e.target.value)}
+/>
+<input
+  className="border p-2 w-full"
+  placeholder="Class UUID (from allclasses)"
+  value={removeClassUUID}
+  onChange={(e) => setRemoveClassUUID(e.target.value)}
+/>
+<button
+  className="bg-red-600 text-white px-4 py-2 rounded"
+  onClick={() =>
+    callAPI(
+      'removeClass',
+      {
+        scheduleid: removeScheduleID,
+        uuid: removeClassUUID,
+      },
+      setRemoveResp
+    )
+  }
+>
+  Remove Class
+</button>
+<pre className="bg-gray-100 p-3 rounded text-sm">{removeResp}</pre>
+
+
+</section>
     </div>
   );
 }
