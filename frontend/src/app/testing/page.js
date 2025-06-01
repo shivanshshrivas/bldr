@@ -31,6 +31,14 @@ export default function TestingPage() {
   const [uuidAddClass, setUuidAddClass] = useState('');
   const [addClassResp, setAddClassResp] = useState('');
 
+  /* ---------- updateClass tester state ---------- */
+  const [updateScheduleid, setUpdateScheduleid] = useState('');
+  const [oldClassid, setOldClassid] = useState('');
+  const [newClassid, setNewClassid] = useState('');
+  const [oldUuid, setOldUuid] = useState('');
+  const [newUuid, setNewUuid] = useState('');
+  const [updateClassResp, setUpdateClassResp] = useState('');
+
   /* ---------- live-class search debounce ---------- */
   useEffect(() => {
     const delay = setTimeout(() => {
@@ -265,6 +273,62 @@ export default function TestingPage() {
         </button>
         <pre className="bg-gray-100 p-3 rounded text-sm whitespace-pre-wrap break-words max-h-96 overflow-y-auto">
           {addClassResp}
+        </pre>
+      </section>
+
+      {/* ---------- updateClass tester ---------- */}
+      <section className="space-y-2">
+        <h2 className="font-semibold text-lg">✏️ Update Class in Schedule</h2>
+        <input
+          className="border p-2 w-full"
+          placeholder="Schedule ID"
+          value={updateScheduleid}
+          onChange={(e) => setUpdateScheduleid(e.target.value)}
+        />
+        <input
+          className="border p-2 w-full"
+          placeholder="Old Class ID"
+          value={oldClassid}
+          onChange={(e) => setOldClassid(e.target.value)}
+        />
+        <input
+          className="border p-2 w-full"
+          placeholder="New Class ID"
+          value={newClassid}
+          onChange={(e) => setNewClassid(e.target.value)}
+        />
+        <input
+          className="border p-2 w-full"
+          placeholder="Old UUID"
+          value={oldUuid}
+          onChange={(e) => setOldUuid(e.target.value)}
+        />
+        <input
+          className="border p-2 w-full"
+          placeholder="New UUID"
+          value={newUuid}
+          onChange={(e) => setNewUuid(e.target.value)}
+        />
+        <button
+          className="bg-blue-600 text-white px-4 py-2 rounded"
+          onClick={() =>
+            callAPI(
+              'updateClass',
+              {
+                scheduleid: updateScheduleid,
+                oldClassid,
+                newClassid,
+                oldUuid,
+                newUuid,
+              },
+              setUpdateClassResp
+            )
+          }
+        >
+          Update Class
+        </button>
+        <pre className="bg-gray-100 p-3 rounded text-sm whitespace-pre-wrap break-words max-h-96 overflow-y-auto">
+          {updateClassResp}
         </pre>
       </section>
     </div>
