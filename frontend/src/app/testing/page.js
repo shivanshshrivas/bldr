@@ -11,6 +11,11 @@ export default function TestingPage() {
   const [search, setSearch] = useState('');
   const [classResults, setClassResults] = useState([]);
 
+    /* ---------- remove class state---------- */
+  const [removeScheduleID, setRemoveScheduleID] = useState('');
+  const [removeClassUUID, setRemoveClassUUID] = useState('');
+  const [removeResp, setRemoveResp] = useState('');
+
   /* ---------- schedule-creation state ---------- */
   const [schedName, setSchedName] = useState('');
   const [semester, setSemester] = useState('');
@@ -274,6 +279,39 @@ export default function TestingPage() {
         <pre className="bg-gray-100 p-3 rounded text-sm whitespace-pre-wrap break-words max-h-96 overflow-y-auto">
           {addClassResp}
         </pre>
+      </section>
+
+      {/* ---------- remove class from schedule ---------- */}
+      <section className="space-y-2">
+        <h2 className="font-semibold text-lg">➖ Remove Class from Schedule</h2>
+      <input
+        className="border p-2 w-full"
+        placeholder="Schedule ID (uuid)"
+        value={removeScheduleID}
+        onChange={(e) => setRemoveScheduleID(e.target.value)}
+      />
+      <input
+        className="border p-2 w-full"
+        placeholder="Class UUID (from allclasses)"
+        value={removeClassUUID}
+        onChange={(e) => setRemoveClassUUID(e.target.value)}
+      />
+      <button
+        className="bg-red-600 text-white px-4 py-2 rounded"
+        onClick={() =>
+          callAPI(
+            'removeClass',
+            {
+              scheduleid: removeScheduleID,
+              uuid: removeClassUUID,
+            },
+            setRemoveResp
+          )
+        }
+      >
+        Remove Class
+      </button>
+      <pre className="bg-gray-100 p-3 rounded text-sm">{removeResp}</pre>
       </section>
 
       {/* ---------- updateClass tester ---------- */}
