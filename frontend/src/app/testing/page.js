@@ -44,6 +44,10 @@ export default function TestingPage() {
   const [newUuid, setNewUuid] = useState('');
   const [updateClassResp, setUpdateClassResp] = useState('');
 
+  /* ---------- getSchedules tester state ---------- */
+  const [getschedulesOnlineID, setGetschedulesOnlineID] = useState('');
+  const [getSchedulesResp, setGetSchedulesResp] = useState('');
+
   /* ---------- live-class search debounce ---------- */
   useEffect(() => {
     const delay = setTimeout(() => {
@@ -369,6 +373,33 @@ export default function TestingPage() {
           {updateClassResp}
         </pre>
       </section>
+
+      {/* ---------- getSchedules tester ---------- */}
+      <section className="space-y-2">
+        <h2 className="font-semibold text-lg">📅 Get Schedules</h2>
+        <input
+          className="border p-2 w-full"
+          placeholder="Online ID: rand"
+          value={getschedulesOnlineID}
+          onChange={(e) => setGetschedulesOnlineID(e.target.value)}
+        />
+        <button
+          className="bg-purple-600 text-white px-4 py-2 rounded"
+          onClick={() =>
+            callAPI(
+              'getSchedules',
+              { onlineID: getschedulesOnlineID },
+              setGetSchedulesResp
+            )
+          }
+        >
+          Fetch Schedules
+        </button>
+        <pre className="bg-gray-100 p-3 rounded text-sm whitespace-pre-wrap break-words max-h-96 overflow-y-auto">
+          {getSchedulesResp}
+        </pre>
+      </section>
+
     </div>
   );
 }
