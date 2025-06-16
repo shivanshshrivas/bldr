@@ -48,6 +48,10 @@ export default function TestingPage() {
   const [getschedulesOnlineID, setGetschedulesOnlineID] = useState('');
   const [getSchedulesResp, setGetSchedulesResp] = useState('');
 
+  /* ---------- getClasses tester state ---------- */
+  const [getClassesScheduleID, setGetClassesScheduleID] = useState('f05f7200-41a8-4277-9fe7-04bbf044061a');
+  const [getClassesResp, setGetClassesResp] = useState('');
+
   /* ---------- live-class search debounce ---------- */
   useEffect(() => {
     const delay = setTimeout(() => {
@@ -397,6 +401,32 @@ export default function TestingPage() {
         </button>
         <pre className="bg-gray-100 p-3 rounded text-sm whitespace-pre-wrap break-words max-h-96 overflow-y-auto">
           {getSchedulesResp}
+        </pre>
+      </section>
+
+      {/* ---------- getClasses tester ---------- */}
+      <section className="space-y-2">
+        <h2 className="font-semibold text-lg">📚 Get Classes from Schedule</h2>
+        <input
+          className="border p-2 w-full"
+          placeholder="Schedule ID: f05f7200-41a8-4277-9fe7-04bbf044061a"
+          value={getClassesScheduleID}
+          onChange={(e) => setGetClassesScheduleID(e.target.value)}
+        />
+        <button
+          className="bg-indigo-600 text-white px-4 py-2 rounded"
+          onClick={() =>
+            callAPI(
+              'getClasses',
+              { scheduleid: getClassesScheduleID },
+              setGetClassesResp
+            )
+          }
+        >
+          Fetch Classes
+        </button>
+        <pre className="bg-gray-100 p-3 rounded text-sm whitespace-pre-wrap break-words max-h-96 overflow-y-auto">
+          {getClassesResp}
         </pre>
       </section>
 

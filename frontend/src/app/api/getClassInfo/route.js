@@ -4,11 +4,17 @@ import { supabase } from '../../lib/supabaseClient';
 
 function parseTimeToFloat(start, end) {
   const to24 = (timeStr) => {
+    // If already in 24-hour format (e.g., "13:30") or missing AM/PM, just parse as is
+    if (!/AM|PM/i.test(timeStr)) {
+      const [hours, minutes] = timeStr.split(':').map(Number);
+      return hours + (minutes || 0) / 60;
+    }
+    // Otherwise, convert from 12-hour format with AM/PM
     const [time, meridian] = timeStr.trim().split(' ');
     let [hours, minutes] = time.split(':').map(Number);
-    if (meridian === 'PM' && hours !== 12) hours += 12;
-    if (meridian === 'AM' && hours === 12) hours = 0;
-    return hours + minutes / 60;
+    if (meridian.toUpperCase() === 'PM' && hours !== 12) hours += 12;
+    if (meridian.toUpperCase() === 'AM' && hours === 12) hours = 0;
+    return hours + (minutes || 0) / 60;
   };
 
   try {
