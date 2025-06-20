@@ -16,7 +16,7 @@ export default function Signup() {
 
     const handleClick = (event) => {
         event.preventDefault();
-        router.push('/info');
+        router.push('/builder');
     }
 
 
@@ -34,22 +34,22 @@ export default function Signup() {
                     </div>
                     <form className="flex flex-col gap-4 w-96">
                         <Label htmlFor="username" className="text-sm font-inter -mb-1">Online ID</Label>
-                        <Input type="text" id="onlineid" placeholder="a123b456" className={`font-inter border-[#404040] border-2`} required
+                        <Input type="text" id="onlineid" placeholder="a123b456" className={`font-inter border-[#404040] border-2 selection:bg-blue-400`} required
                         value = {userId}
                         onChange = {(e) => {setUserId(e.target.value)} } />
 
                         <Label htmlFor="password" className="text-sm font-inter -mb-1">Password</Label>
-                        <Input type="password" id='password' className={`font-inter border-[#404040] border-2`} required 
+                        <Input type="password" id='password' className={`font-inter border-[#404040] border-2 selection:bg-blue-400`} required 
                         value = {password}
                         onChange = {(e) => {setPassword(e.target.value)}} />
                         
                         <Label htmlFor="confirm-password" className="text-sm font-inter -mb-1">Confirm Password</Label>
-                        <Input type="password" id='confirm-password' className={`font-inter border-[#404040] border-2`} required />
+                        <Input type="password" id='confirm-password' className={`font-inter border-[#404040] border-2 selection:bg-blue-400`} required />
                         <Button type="submit" className={`bg-[#fafafa] text-[#1a1a1a] hover:bg-[#404040] hover:text-[#fafafa] cursor-pointer font-dmsans text-md my-3`}
                         onClick={(e) => {handleClick(e)}}>
                             Sign Up</Button>
                     </form>
-                    <div className="text-[#a8a8a8] text-xs mt-3 font-inter">Already have an account with us? <Link href={'/login'} className="font-medium text-white font-inter">Log in</Link></div>
+                    <div className="text-[#a8a8a8] text-xs mt-3 font-inter">Already have an account with us? <Link href={'/'} className="font-medium text-white font-inter">Log in</Link></div>
                 </div>
             </div>
         </div>

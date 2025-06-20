@@ -29,7 +29,7 @@ export default function Page() {
         <div className='flex flex-row h-screen w-full items-start'>
             <Sidebar />
             <div className="flex flex-col justify-start items-start w-full ">
-                <div className="page-header bg-[#1C1C1C] sticky top-0 w-full flex flex-1 justify-between items-center">
+                <div className="page-header z-20 bg-[#1C1C1C] sticky w-full flex flex-1 justify-between items-center">
                     <div className="w-full flex-col items-center transition-all duration-300">
                         {userId && (
                             <motion.div
@@ -60,14 +60,14 @@ export default function Page() {
                             </motion.div>
                         </div>
                     </div>
-                    <h1 className="text-7xl font-dmsans px-5">
+                    <h1 className="text-4xl sm:text-6xl md:text-7xl font-dmsans font-semibold px-5">
                         <span className="text-white">b</span>
                         <span className="text-red-500">l</span>
                         <span className="text-blue-600">d</span>
                         <span className="text-yellow-300">r</span>
                     </h1>
                 </div>
-                <div className="flex flex-row flex-1 justify-start items-start gap-2 h-full">
+                <div className="flex flex-col md:flex-row flex-1 justify-start items-start gap-2 h-full">
                     {activeScheduleName && <ClassSearch />}
                     <TestCal />
                 </div>

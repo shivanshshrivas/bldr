@@ -108,7 +108,7 @@ export function Sidebar() {
   
 
   return (
-    <div className={`${open ? 'mr-[360px]' : 'mr-[90px]'} transition-all duration-300`}>
+    <div className={`${open ? 'mr-[360px]' : 'mr-[90px]'} z-100 transition-all duration-300`}>
       <div className={`sidebar mr-2 flex flex-col justify-between rounded-tr-2xl rounded-br-2xl fixed top-0 left-0 h-screen transition-all duration-300 ${open ? 'min-w-[350px] max-w-[350px] bg-[#080808]' : 'bg-transparent min-w-[80px] max-w-[80px]'} overflow-hidden p-5`}>
         {/* Top section: toggle & search */}
         <div>
@@ -134,7 +134,7 @@ export function Sidebar() {
                           <path d="M20.9999 20.9999L16.6499 16.6499" stroke="#fafafa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                         </svg>
                       </TooltipTrigger>
-                      <TooltipContent  className="text-xs font-figtree text-[#fafafa]" side='bottom' >
+                      <TooltipContent  className="text-xs font-figtree z-100 text-[#fafafa]" side='bottom' >
                         <p>Search schedule</p>
                       </TooltipContent>
                   </Tooltip>
@@ -166,7 +166,7 @@ export function Sidebar() {
                         value={newScheduleName}
                         onChange={(e) => setNewScheduleName(e.target.value)}
                         placeholder="Schedule name"
-                        className="font-inter border-[#404040] border-1 placeholder:text-xs text-xs"
+                        className="font-inter border-[#404040] border-1 placeholder:text-xs selection:bg-blue-400 text-xs"
                       />
                       <Button
                         type="button"

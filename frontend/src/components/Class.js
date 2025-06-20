@@ -68,7 +68,7 @@ export default function Class(props) {
                     key={section.uuid}
                     className={
                         `w-full font-inter rounded-md mt-2 bg-[#181818] transition duration-100 px-3 py-2 text-left` +
-                        (section.seats_available > 0 ? " cursor-pointer hover:bg-[#232323]" : " cursor-not-allowed opacity-60")
+                        (section.seats_available > 0 ? " cursor-pointer hover:bg-[#232323]" : " cursor-default opacity-60")
                     }
                     >
                     <div className="flex flex-row w-full justify-between gap-4 items-start mb-1">

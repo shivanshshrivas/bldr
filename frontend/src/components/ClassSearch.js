@@ -66,7 +66,7 @@ export default function ClassSearch() {
     }
 
     return (
-        <div className="flex flex-col justify-start items-center my-5 min-w-[420px] max-w-[500px] max-h-[600px] overflow-y-scroll bg-[#080808] transition-all duration-150 border-2 border-[#303030] rounded-2xl">
+        <div className="flex flex-col justify-start items-center my-5 min-w-[420px] max-w-[500px] max-h-[600px] overflow-y-scroll bg-[#080808] transition-all duration-150 border-2 border-[#303030] rounded-[10px]">
             <div className="flex flex-col justify-start items-center w-full h-full p-5">
                 <h1 className="text-xl self-start font-figtree font-bold text-[#fafafa]">Search for classes</h1>
                 <div className="flex-col justify-start items-center w-full">
@@ -85,7 +85,7 @@ export default function ClassSearch() {
                             onChange = {(e) => {setSearchQuery(e.target.value);  setDropdownOpen(true);}}
                             onFocus={() => setDropdownOpen(true)}
                             placeholder="Class name"
-                            className="font-inter border-[#404040] border-1 placeholder:text-xs text-xs" />
+                            className="font-inter border-[#404040] border-1 placeholder:text-xs selection:bg-blue-400 text-xs" />
                         <TooltipProvider>
                             <Tooltip delayDuration={300} >
                             <TooltipTrigger asChild >
