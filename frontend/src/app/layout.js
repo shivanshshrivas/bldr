@@ -2,7 +2,7 @@ import "./globals.css";
 import { AuthProvider } from "../context/AuthContext";
 import { Sidebar } from "@/components/Sidebar";
 import ChatWindow from "@/components/ChatWindow";
-
+import { Toaster } from "@/components/ui/sonner";
 
 
 export const metadata = {
@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
           <AuthProvider>
             {children}
           </AuthProvider>
+          <Toaster />
       </body>
     </html>
   );

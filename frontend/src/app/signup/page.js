@@ -1,4 +1,3 @@
-
 'use client';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -7,16 +6,70 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
-
+import { toast } from "sonner";
 
 export default function Signup() {
 
     const router = useRouter();
-    const { userId, setUserId, password, setPassword } = useAuth();
+    const { userId, setUserId } = useAuth();
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
-    const handleClick = (event) => {
+    const handleClick = async (event) => {
         event.preventDefault();
-        router.push('/builder');
+        console.log("password", password);
+        console.log("confirmPassword", confirmPassword);
+        if (password !== confirmPassword) {
+            toast('Passwords do not match', {
+                style: {fontFamily: 'Inter', backgroundColor: '#404040', borderColor: '--var(--border-color)', color: '#fff'},
+                description: 'Please ensure both password fields match.',
+                duration: 3000,
+                icon: '❌',
+            });
+            return;
+        }
+        if (password.length < 6) {
+            toast.error('Password must be at least 6 characters long', {
+                style: { fontFamily: 'Inter', backgroundColor: '#404040', color: '#fff' },
+                duration: 3000,
+                icon: '🔒',
+            });
+            return;
+        }
+        try {
+            const response = await fetch('/api/signUp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    query: userId // or use a different field if needed
+                }),
+            });
+            if (!response.ok) {
+                const errorData = await response.json();
+                if (errorData.error && errorData.error.toLowerCase().includes('user already exists')) {
+                    toast.error('User already exists', {
+                        style: { fontFamily: 'Inter', backgroundColor: '#404040', color: '#fff' },
+                        duration: 3000,
+                        icon: '⚠️',
+                    });
+                } else {
+                    toast.error(errorData.error || response.statusText, {
+                        style: { fontFamily: 'Inter', backgroundColor: '#404040', color: '#fff' },
+                        duration: 3000,
+                        icon: '❌',
+                    });
+                }
+                return;
+            }
+            // Optionally handle response data here
+            setUserId(userId);
+            setPassword("");
+            router.push('/builder');
+        } catch (error) {
+            console.error("Network or server error:", error);
+        }
     }
 
 
@@ -44,8 +97,10 @@ export default function Signup() {
                         onChange = {(e) => {setPassword(e.target.value)}} />
                         
                         <Label htmlFor="confirm-password" className="text-sm font-inter -mb-1">Confirm Password</Label>
-                        <Input type="password" id='confirm-password' className={`font-inter border-[#404040] border-2 selection:bg-blue-400`} required />
-                        <Button type="submit" className={`bg-[#fafafa] text-[#1a1a1a] hover:bg-[#404040] hover:text-[#fafafa] cursor-pointer font-dmsans text-md my-3`}
+                        <Input type="password" id='confirm-password' className={`font-inter border-[#404040] border-2 selection:bg-blue-400`} required 
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)} />
+                        <Button type="submit" variant={'secondary'} className={`transition cursor-pointer font-dmsans text-md my-3`}
                         onClick={(e) => {handleClick(e)}}>
                             Sign Up</Button>
                     </form>

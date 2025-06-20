@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
+import { toast } from "sonner";
 
 export default function Login() {
 
@@ -14,7 +15,6 @@ export default function Login() {
     const [password, setPassword] = useState("");
     const handleSubmit = async (e) => {
         e.preventDefault();
-  
         try {
           const response = await fetch('/api/login', {
             method: 'POST',
@@ -26,9 +26,13 @@ export default function Login() {
               password: password,
             }),
           });
-  
           if (!response.ok) {
             const errorData = await response.json();
+            toast.error(errorData.message || response.statusText, {
+              style: { fontFamily: 'Inter', backgroundColor: '#404040', color: '#fff' },
+              duration: 3000,
+              icon: '❌',
+            });
             console.error("Login failed:", errorData.message || response.statusText);
             return;
           }
