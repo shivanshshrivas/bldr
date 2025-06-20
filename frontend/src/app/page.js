@@ -1,4 +1,3 @@
-
 'use client';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -11,13 +10,13 @@ import { useAuth } from "@/context/AuthContext";
 export default function Login() {
 
     const router = useRouter();
-    const { userId, setUserId, password, setPassword } = useAuth();
-
+    const { userId, setUserId } = useAuth();
+    const [password, setPassword] = useState("");
     const handleSubmit = async (e) => {
         e.preventDefault();
-      
+  
         try {
-          const response = await fetch('http://10.104.175.40:5000/api/auth/login', {
+          const response = await fetch('/api/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -27,17 +26,15 @@ export default function Login() {
               password: password,
             }),
           });
-      
+  
           if (!response.ok) {
             const errorData = await response.json();
             console.error("Login failed:", errorData.message || response.statusText);
             return;
           }
-      
-          // Only set password if you absolutely must store it temporarily (not recommended)
+  
           setUserId(userId);
-          setPassword(""); // Optional: Clear password immediately after
-      
+  
           router.push('/builder');
         } catch (error) {
           console.error("Network or server error:", error);
@@ -75,7 +72,7 @@ export default function Login() {
                         <Label htmlFor="password" className="text-sm font-inter -mb-1">Password</Label>
                         </div>
                         <Input type="password" value = {password} onChange = {(e) => {setPassword(e.target.value)}} id='password' placecholder='********' className={`font-inter selection:bg-blue-400 border-[#404040] border-2`} required />
-                         <Button type="submit"   onClick={handleSubmit} className={`bg-[#fafafa] text-[#1a1a1a] hover:bg-[#404040] hover:text-[#fafafa] cursor-pointer font-dmsans text-md my-3`}>Login</Button>
+                         <Button type="submit" variant={'secondary'}  onClick={handleSubmit} className={`text-[#1a1a1a] cursor-pointer font-dmsans text-md my-3`}>Login</Button>
                     </form>
                     <div className="text-[#a8a8a8] text-xs mt-3 font-inter">Don't have an account with us? <Link href={'/signup'} className="font-medium text-white font-inter">Sign up</Link></div>
                 </div>
