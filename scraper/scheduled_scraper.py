@@ -1,45 +1,53 @@
+
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait, Select
-from selenium.webdriver.support import expected_conditions as EC
-import time
+import pandas as pd
 import os
 
-# Optional: Set your download directory
-download_dir = "/path/to/save/excel"
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait, Select
+from selenium.webdriver.support import expected_conditions as EC
 
-options = webdriver.ChromeOptions()
+
+import time
+
+
+
+
+
+
+
+chrome_options=webdriver.ChromeOptions()
 prefs = {
-    "download.default_directory": download_dir,
-    "download.prompt_for_download": False,
-    "directory_upgrade": True,
-    "safebrowsing.enabled": True
+    "download.default_directory": r"C:\Users\evere\OneDrive\Desktop\project\bldr\scraper\downloads"
+   
 }
-options.add_experimental_option("prefs", prefs)
 
-# Start browser
-driver = webdriver.Chrome(options=options)
-driver.get("https://classes.ku.edu/Classes/Display.action")
+chrome_options.add_experimental_option("prefs", prefs)
+chrome_options.add_argument("--headless")  
+driver = webdriver.Chrome(options=chrome_options)
+driver.get('https://classes.ku.edu/')
 
-# === Step 1: Click the "More Options" button ===
-more_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.ID, "toggleOptionalSearchFieldsButton"))
-)
-more_button.click()
 
-# === Step 2: Select "Excel file (all meeting times)" from dropdown ===
-dropdown = WebDriverWait(driver, 10).until(
-    EC.presence_of_element_located((By.ID, "classesDisplayResultsFormat"))
-)
-Select(dropdown).select_by_value("XLS-multiple")
+option_button = driver.find_element(By.CLASS_NAME, 'moreOptionsButton')
+option_button.click()
 
-# === Step 3: Click the "Search" button ===
-search_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.CLASS_NAME, "classSearchButton"))
-)
+
+WebDriverWait(driver, 2).until(
+            EC.element_to_be_clickable((By.ID, "classesDisplayResultsFormat"))).click()
+
+dropdown = Select(driver.find_element(By.ID, "classesDisplayResultsFormat"))
+dropdown.select_by_value("XLS-multiple")
+search_button = driver.find_element(By.CLASS_NAME, 'classSearchButton')
 search_button.click()
 
-# === Step 4: Wait for download (or check file exists) ===
-time.sleep(10)
-
+time.sleep(40)
 driver.quit()
+
+df=pd.read_excel(r"C:\Users\evere\OneDrive\Desktop\project\bldr\scraper\downloads\classes.xls", sheet_name=None)
+
+
+df.to_csv(r"C:\Users\evere\OneDrive\Desktop\project\bldr\scraper\downloads\classes.csv", index=False)
+os.remove(r"C:\Users\evere\OneDrive\Desktop\project\bldr\scraper\downloads\classes.xls")
+
